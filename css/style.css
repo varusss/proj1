@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    position: fixed;
+    width: 100%;
+    background: #474780;
+    color: white;
+    margin: 0;
+    top: 0;
+}
+
+.lit{
+    display: inline-block;
+    width: 10%;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 15%;
+    margin: 0 5% 0 5%;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+nav ul li a:hover{
+    background: #5755cf;
+}
+.dropdown {
+    display: none;
+    padding: 1%;
+    width: 1%;
+    min-width: 160px;
+    
+}
+
+.portfolio:hover .dropdown {
+    display:block;
+    position: absolute;
+    background: #474780;
+}
+
+.box1{
+    margin-top: 5%;
+    text-align: center;
+    height: 100vh;
+}
