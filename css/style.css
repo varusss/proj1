@@ -1,54 +1,67 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
 }
 
-nav ul {
-    list-style-type: none;
-    position: fixed;
-    width: 100%;
-    background: #474780;
-    color: white;
-    margin: 0;
-    top: 0;
-}
-
-.lit{
-    display: inline-block;
-    width: 10%;
-}
-
-nav ul li a{
+a {
     text-decoration: none;
-    color: white;
-    padding: 15%;
-    margin: 0 5% 0 5%;
-    display: inline-block;
+}
+
+#nav {
     width: 100%;
-    text-align: center;
-}
-nav ul li a:hover{
-    background: #5755cf;
-}
-.dropdown {
-    display: none;
-    padding: 1%;
-    width: 1%;
-    min-width: 160px;
+    background: #ffb282;
+    top: 0;
+    position: fixed;
     
 }
 
-.portfolio:hover .dropdown {
-    display:block;
+nav ul {
+    margin: 0;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    width: 60%;
+}
+
+.content li {
+    list-style-type: none;
+    width: 10%;
+    text-align: center;
+    padding: 1% 0;
+}
+
+.content li:hover{
+    background: #ffceaf;
+}
+
+.content li a {
+    padding: 10% 10%;
+}
+
+.dropdown {
+    display: none;
     position: absolute;
-    background: #474780;
+    margin-top: .4%;
+    background: #ffceaf;
+    min-width: 160px;
+}
+
+.dropdown ul li {
+    padding: 1% 0;
+}
+
+.portfolio:hover .dropdown {
+    display: block;
 }
 
 .box1{
-    margin-top: 5%;
-    text-align: center;
     height: 100vh;
 }
