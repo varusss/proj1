@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora:400,400i|Playfair+Display:400,700');
 * {
     box-sizing: border-box;
 }
@@ -15,35 +16,47 @@ a {
     background: #ffb282;
     top: 0;
     position: fixed;
-    
+    font-family: 'Lora', serif;
 }
 
 nav ul {
     margin: 0;
 }
 
-.flex{
+.flex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: flex-start;
-    width: 60%;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.flex-resume{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .content li {
     list-style-type: none;
-    width: 10%;
+    width: 20%;
     text-align: center;
     padding: 1% 0;
 }
 
-.content li:hover{
+.content li:hover {
     background: #ffceaf;
 }
 
 .content li a {
     padding: 10% 10%;
+    color: #000000;
 }
 
 .dropdown {
@@ -51,17 +64,62 @@ nav ul {
     position: absolute;
     margin-top: .4%;
     background: #ffceaf;
-    min-width: 160px;
+    width: 200px;
 }
 
 .dropdown ul li {
-    padding: 1% 0;
+    margin: 5%;
 }
 
 .portfolio:hover .dropdown {
     display: block;
 }
 
-.box1{
-    height: 100vh;
+.wrapper1, .wrapper2, .wrapper3, .wrapper-W, .wrapper-C {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.box1 {
+    height: 70vh;
+    text-align: center;
+}
+
+.box1 h1{
+    animation-name: appear;
+    animation-duration: 3s;
+}
+
+@keyframes appear{
+    0% {opacity: 0;}
+    100% {opacity: 1};
+}
+
+.content {
+    font-family: 'Libre Baskerville', serif;
+}
+
+
+
+/*---CONTACT---*/
+
+input{
+    border: 0;
+    border-bottom: 2px solid #23305c;
+}
+
+input[type="submit"]{
+    border: 1px solid #49afb2;
+    width: 20%;
+    padding: 1%;
+    background: #49afb2;
+    border-radius: 20px;
+}
+
+.wrapper-C h3{
+    text-align: center;
+}
+
+form{
+    padding-left: 40%;
 }
