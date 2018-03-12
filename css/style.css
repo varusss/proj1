@@ -11,6 +11,14 @@ a {
     text-decoration: none;
 }
 
+h1{
+    text-align: center;
+}
+
+img{
+    margin: 2% 3%;
+}
+
 #nav {
     width: 100%;
     background: #ffb282;
@@ -76,7 +84,7 @@ nav ul {
 }
 
 .wrapper1, .wrapper2, .wrapper3, .wrapper-W, .wrapper-C {
-    max-width: 1020px;
+    max-width: 990px;
     margin: 0 auto;
 }
 
@@ -99,13 +107,23 @@ nav ul {
     font-family: 'Libre Baskerville', serif;
 }
 
+/*---PROGRAM---*/
+
 
 
 /*---CONTACT---*/
-
+.form  {
+    max-width: 360px;
+}
 input{
     border: 0;
     border-bottom: 2px solid #23305c;
+    width: 233px;
+}
+
+input:focus{
+    animation: translate3d(-100%,0,0);
+    transition: transform 0.3s;
 }
 
 input[type="submit"]{
@@ -114,12 +132,25 @@ input[type="submit"]{
     padding: 1%;
     background: #49afb2;
     border-radius: 20px;
+    margin-left: 23%;
 }
 
+label{
+    height: calc(100% - 10px);
+    top: 0;
+    left: 0;
+}
 .wrapper-C h3{
     text-align: center;
 }
 
 form{
+    width: 100%;
     padding-left: 40%;
+}
+
+/*-----ART-----*/
+.header{
+    max-width: 100%;
+    height: auto;
 }
