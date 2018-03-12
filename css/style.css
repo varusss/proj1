@@ -11,17 +11,17 @@ a {
     text-decoration: none;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-img{
+img {
     margin: 2% 3%;
 }
 
 #nav {
     width: 100%;
-    background: #ffb282;
+    background: transparent;
     top: 0;
     position: fixed;
     font-family: 'Lora', serif;
@@ -41,7 +41,7 @@ nav ul {
     margin: 0 auto;
 }
 
-.flex-resume{
+.flex-resume {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -55,11 +55,11 @@ nav ul {
     list-style-type: none;
     width: 20%;
     text-align: center;
-    padding: 1% 0;
+    padding: 2% 0;
 }
 
 .content li:hover {
-    background: #ffceaf;
+    border-bottom: 3px solid #ffceaf;
 }
 
 .content li a {
@@ -83,24 +83,63 @@ nav ul {
     display: block;
 }
 
-.wrapper1, .wrapper2, .wrapper3, .wrapper-W, .wrapper-C {
+.wrapper1,
+.wrapper2,
+.wrapper3,
+.wrapper-W,
+.wrapper-C {
     max-width: 990px;
     margin: 0 auto;
 }
 
+
+/*---ABOUT ME-----*/
+
 .box1 {
-    height: 70vh;
+    height: 100vh;
     text-align: center;
+    padding-top: 5%;
+    background: linear-gradient(#318083, #21585a);
 }
 
-.box1 h1{
+.box1 h1,
+.button {
     animation-name: appear;
     animation-duration: 3s;
 }
 
-@keyframes appear{
-    0% {opacity: 0;}
-    100% {opacity: 1};
+.text {
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 65%);
+    width: 50%;
+    height: auto;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 8px;
+    transform: rotate(45deg);
+    padding-top: 
+}
+
+.contentBox {
+    height: 100vh;
+    padding-top: 10%;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }
+    ;
 }
 
 .content {
@@ -109,24 +148,24 @@ nav ul {
 
 /*---PROGRAM---*/
 
-
-
 /*---CONTACT---*/
-.form  {
+
+.form {
     max-width: 360px;
 }
-input{
+
+input {
     border: 0;
     border-bottom: 2px solid #23305c;
     width: 233px;
 }
 
-input:focus{
-    animation: translate3d(-100%,0,0);
+input:focus {
+    animation: translate3d(-100%, 0, 0);
     transition: transform 0.3s;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     border: 1px solid #49afb2;
     width: 20%;
     padding: 1%;
@@ -135,22 +174,75 @@ input[type="submit"]{
     margin-left: 23%;
 }
 
-label{
+label {
     height: calc(100% - 10px);
     top: 0;
     left: 0;
 }
-.wrapper-C h3{
+
+.wrapper-C h3 {
     text-align: center;
 }
 
-form{
+form {
     width: 100%;
     padding-left: 40%;
 }
 
 /*-----ART-----*/
-.header{
+
+.header {
     max-width: 100%;
     height: auto;
+}
+
+/*--WRITTING--*/
+
+.write {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.writting {
+    display: none;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    body {
+        background: black;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .icon {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
 }
