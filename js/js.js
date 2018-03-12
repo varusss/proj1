@@ -1,5 +1,6 @@
 "use strict"
 var slideIndex = 1;
+
 function showSlide(n) {
     var i,
         slide = document.getElementsByClassName("writting");
@@ -24,7 +25,7 @@ function currentSlide(n) {
 }
 showSlide(slideIndex);
 
-function down(){
-    window.scrollTo(0,1000);
-}
-
+function down() {
+    window.scrollTo(0, 1000);
+    document.getElementById("nav").setAttribute("style", "background : #ffceaf");
+    }

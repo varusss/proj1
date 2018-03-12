@@ -111,7 +111,7 @@ nav ul {
 .text {
     top: 50%;
     left: 50%;
-    transform: translate(50%, 65%);
+    transform: translate(50%, 35%);
     width: 50%;
     height: auto;
     background: rgba(255, 255, 255, 0.2);
@@ -120,11 +120,11 @@ nav ul {
 
 .button {
     border: solid black;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 8px;
+    padding: 13px;
     transform: rotate(45deg);
-    padding-top: 
+    bottom: 0;
 }
 
 .contentBox {
