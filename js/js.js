@@ -1,9 +1,8 @@
-"use strict"
 var slideIndex = 1;
 
 function showSlide(n) {
     var i,
-        slide = document.getElementsByClassName("writting");
+        slide = document.getElementsByClassName("pic");
     if (n > slide.length) {
         slideIndex = 1;
     }
@@ -27,5 +26,14 @@ showSlide(slideIndex);
 
 function down() {
     window.scrollTo(0, 1000);
-    document.getElementById("nav").setAttribute("style", "background : #ffceaf");
+}
+
+function changeNav() {
+    var nav = document.getElementById("nav");
+    if (screen.height > 100) {
+        nav.setAttribute("style", "background:#ffceaf");
+    } else {
+        nav.setAttribute("style", "background:transparent");
     }
+    //nav.("nav").addEventListener("click", down);
+}
