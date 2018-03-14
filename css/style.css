@@ -92,6 +92,79 @@ nav ul {
     margin: 0 auto;
 }
 
+/*----HOME------*/
+
+.page1 {
+    height: 100vh;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+    background: #49afb2;
+    position: fixed;
+}
+
+#left,
+#right {
+    top: 0;
+    bottom: 0;
+    width: 15px;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
+}
+
+#top,
+#bottom {
+    left: 0;
+    right: 0;
+    height: 15px;
+}
+
+#top {
+    top: 0;
+}
+
+#bottom {
+    bottom: 0;
+}
+
+.text1 {
+    padding: 3% 2%;
+}
+
+.flex-h {
+    padding-top: 4%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.me {
+    opacity: 0;
+}
+
+/*
+.middle{
+    transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
 
 /*---ABOUT ME-----*/
 
