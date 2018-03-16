@@ -15,6 +15,7 @@ h1 {
     text-align: center;
 }
 
+
 img {
     margin: 2% 3%;
 }
@@ -22,9 +23,10 @@ img {
 #nav {
     width: 100%;
     background: transparent;
-    top: 3%;
+    top: 0%;
     position: fixed;
     font-family: 'Lora', serif;
+    margin-top: 1%;
 }
 
 nav ul {
@@ -37,29 +39,19 @@ nav ul {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: flex-start;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.flex-resume {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
 }
 
 .content li {
     list-style-type: none;
-    width: 20%;
+    width: 28%;
     text-align: center;
     padding: 2% 0;
 }
 
 .content li:hover {
-    border-bottom: 3px solid #ffceaf;
+    border-top: 3px solid #ffceaf;
 }
 
 .content li a {
@@ -70,13 +62,20 @@ nav ul {
 .dropdown {
     display: none;
     position: absolute;
-    margin-top: .4%;
+    margin-top: .5%;
     background: #ffceaf;
     width: 200px;
+    padding: 1%;
+    font-size: 1em;
 }
 
-.dropdown ul li {
-    margin: 5%;
+.dropdown ul{
+    padding: 0px;
+}
+
+.dropdown ul li:hover{
+    border-top: 0px;
+    font: 1.2em
 }
 
 .portfolio:hover .dropdown {
@@ -168,13 +167,10 @@ nav ul {
 
 /*---ABOUT ME-----*/
 
-.box1 {
+.img{
     height: 100vh;
-    text-align: center;
-    padding-top: 5%;
-    background: linear-gradient(#318083, #21585a);
+    width: 100%;
 }
-
 .box1 h1,
 .button {
     animation-name: appear;
@@ -184,13 +180,14 @@ nav ul {
 .text {
     top: 50%;
     left: 50%;
-    transform: translate(50%, 75%);
+    transform: translate(50%, 150%);
     width: 50%;
     height: auto;
 }
 
 .button {
-    border: solid black;
+    margin-left: 48%;
+    border: solid #474b5a;
     border-width: 0 2px 2px 0;
     display: inline-block;
     padding: 13px;
@@ -217,7 +214,52 @@ nav ul {
     font-family: 'Libre Baskerville', serif;
 }
 
-/*---PROGRAM---*/
+/*---RESUME---*/
+
+.wrapper3 h1{
+    margin-top: 10%;
+}
+
+.wrapper3 h2{
+    text-align: center;
+}
+
+.flex-resume {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+.box3-1 p{
+    margin: 0;
+}
+
+.flex-resume h4{
+    margin-bottom: 1%;
+    padding: 0;
+}
+
+.box3-1, .box3-2{
+    width: 50%;
+    text-align: center;
+}
+
+.letter1, .letter2{
+    width: 50%;
+    text-align: justify;
+}
+
+.letter1{
+    padding-right: 2%;  
+}
+
+.letter2{
+    padding-left: 2%;
+}
+
 
 /*---CONTACT---*/
 
