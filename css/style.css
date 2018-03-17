@@ -96,6 +96,7 @@ nav ul {
 
 .page1 {
     height: 100vh;
+    background-attachment: fixed;
 }
 
 #top,
