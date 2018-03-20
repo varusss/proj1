@@ -9,9 +9,14 @@ function prevSlide() {
     slideShows(current -= 1);
 }
 
-function slideShows(n) {
+function slideShows(current) {
     var i;
-    n = current;
+    if (current > slides.length) {
+        current = 0;
+    }
+    if(current < 0){
+        current = slides.length;
+    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -26,10 +31,12 @@ function down() {
 
 function changeNav() {
     var nav = document.getElementById("nav");
-    if (screen.height > 100) {
+   
+    nav.addEventListener("scroll", function change (){
+         if (screen.height > 100) {
         nav.setAttribute("style", "background:#ffceaf");
     } else {
         nav.setAttribute("style", "background:transparent");
     }
-    //nav.("nav").addEventListener("click", down);
+    });
 }
