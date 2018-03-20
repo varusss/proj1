@@ -1,28 +1,24 @@
-var slideIndex = 1;
+var slides = document.getElementsByClassName("pic"),
+    current = 0;
 
-function showSlide(n) {
-    var i,
-        slide = document.getElementsByClassName("pic");
-    if (n > slide.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slideIndex.length;
-    }
-    for (i = 0; i < slide.length; i++) {
-        slide[i].style.display = "none";
-    }
-    slide[slideIndex - 1].style.display = "block";
+function nextSlide() {
+    slideShows(current += 1);
 }
 
-function plusSlide(n) {
-    showSlide(slideIndex += n);
+function prevSlide() {
+    slideShows(current -= 1);
 }
 
-function currentSlide(n) {
-    showSlide(slideIndex = n);
+function slideShows(n) {
+    var i;
+    n = current;
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[current].style.display = "block";
 }
-showSlide(slideIndex);
+
+
 
 function down() {
     window.scrollTo(0, 1000);

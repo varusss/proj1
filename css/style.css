@@ -13,6 +13,17 @@ a {
 
 h1 {
     text-align: center;
+    font-family: 'Lora', serif;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Lora', serif;
+}
+
+p {
+    font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -26,9 +37,10 @@ img {
     top: 0%;
     position: absolute;
     font-family: 'Lora', serif;
-    margin-top: 1%;
     box-shadow: 0px 15px 10px -15px #111;
     height: 8vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
 }
 
 nav ul {
@@ -66,7 +78,8 @@ nav ul {
 .dropdown {
     display: none;
     position: absolute;
-    background: #919191;
+    margin-top: 1%;
+    background: #ffceaf;
     width: 200px;
     height: 17vh;
 }
@@ -93,9 +106,29 @@ nav ul {
     margin: 0 auto;
 }
 
+footer {
+    width: 100%;
+    background: #49afb2;
+    height: 12vh;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: aliceblue;
+}
+
+.linkedImg {
+    background: url(../img/linked-in-2668700_640.png) no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+}
+
 /*----HOME------*/
 
-.page1 {
+.text1 {
     height: 100vh;
     background-attachment: fixed;
 }
@@ -132,17 +165,18 @@ nav ul {
 }
 
 @keyframes bounce {
-  0%,
-  100%,
-  50%, {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-10px);
-  }
-  75% {
-    transform: translateY(-5px);
-  }
+    0%,
+    100%,
+    50%,
+        {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes first {
@@ -162,14 +196,12 @@ nav ul {
 #bottom,
 #left,
 #right {
-    background: linear-gradient(#000638,#000b6a);
+    background: linear-gradient(#000638, #000b6a);
     position: fixed;
     animation: border-change infinite;
 }
 
-@keyframes border-change{
-    
-}
+@keyframes border-change {}
 
 #left,
 #right {
@@ -217,8 +249,8 @@ nav ul {
     margin: 0 auto;
 }
 
-.me{
-    color: #000000;  
+.me {
+    color: #000000;
     background: white;
     z-index: 1;
 }
@@ -237,11 +269,6 @@ nav ul {
 
 /*---ABOUT ME-----*/
 
-.img {
-    height: 100vh;
-    width: 100%;
-}
-
 .box1 h1,
 .button {
     animation-name: appear;
@@ -249,11 +276,8 @@ nav ul {
 }
 
 .text {
-    top: 50%;
-    left: 50%;
-    transform: translate(50%, 150%);
-    width: 50%;
-    height: auto;
+    padding-top: 15%;
+    height: 50vh;
 }
 
 .contentBox {
@@ -283,6 +307,7 @@ nav ul {
 
 .wrapper3 h2 {
     text-align: center;
+    margin-top: 0;
 }
 
 .flex-resume {
@@ -306,24 +331,32 @@ nav ul {
 
 .box3-1,
 .box3-2 {
-    width: 50%;
+    width: 48%;
     text-align: center;
+    background: #49afb2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
 }
+
 
 .letter1,
 .letter2 {
     width: 50%;
-    text-align: justify;
 }
 
-.letter1 {
-    padding-right: 2%;
+.border {
+    padding: 2%;
+    border: 1px solid white;
 }
 
+.letter1,
 .letter2 {
-    padding-left: 2%;
+    text-align: justify;
+    background: #49afb2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+    margin-bottom: 5%;
 }
-
 
 /*---CONTACT---*/
 
@@ -368,17 +401,19 @@ form {
 
 /*-----ART-----*/
 
+.imgA {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
 .header {
     max-width: 100%;
     height: auto;
 }
 
-/*--WRITTING--*/
-
-.imgA {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
+.pic:nth-child(1) {
+    display: block;
 }
 
 .pic {
@@ -403,6 +438,16 @@ form {
 .next {
     right: 10%;
 }
+
+/*--WRITTING--*/
+
+.write {
+    margin-top: 5%;
+    background: #49afb2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+}
+
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
     body {
