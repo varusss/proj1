@@ -217,9 +217,12 @@ nav ul {
     margin: 0 auto;
 }
 
-.me {
-    opacity: 0;
+.me{
+    color: #000000;  
+    background: white;
+    z-index: 1;
 }
+
 
 /*
 .middle{
