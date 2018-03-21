@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onscroll="changeNav()">
     <header>
         <nav id="nav">
             <div class="iconMenu">
@@ -39,7 +39,7 @@
     <div class="wrapper3">
         <h1>Resume</h1>
 
-        <div class="flex-resume">
+        <div class="flex-resume fadeIn">
             <div class="box3-1">
                 <div class="border">
                     <h2>Education</h2>
@@ -97,7 +97,7 @@
         </div>
 
         <h2>Recomendation Letters</h2>
-        <div class="">
+        <div class="fadeIn">
             <h2>First Letter</h2>
             <div class="letter1">
                 <div class="border">
@@ -154,10 +154,19 @@
     </div>
 
     <footer>
-        <div class="linkedImg"></div>
+       <div class="flex-footer">
+           
         <p>Oanh Tran</p>
+        <div class="linkedImg">
+           <a href="https://www.linkedin.com/in/oanh-tran-bb425015b/" target="_blank">
+               <img src="img/linked-in-2668700_640.png" alt="" width="40" height="40">
+           </a>
+            
+        </div>
+       </div>
+        
     </footer>
-
+    <script type="text/javascript" src="js/js.js"></script>
 </body>
 
 </html>
