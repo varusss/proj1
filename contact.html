@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Contact</title>
@@ -7,7 +8,7 @@
 </head>
 
 <body>
-     <header>
+    <header>
         <nav id="nav">
             <div class="iconMenu">
                 <div class="icon"></div>
@@ -39,19 +40,20 @@
 
     <div class="wrapper-C">
         <h3>You can contact me through this:</h3>
-        <form name="contact">
-            <div class="form"><label>Name</label><br>
-                <input type="text">
-                <br><br>
-                <label>Email</label><br>
-                <input type="email">
+        <form name="contact" onsubmit="validate">
+            <label>Name</label><br>
+            <input type="text" id="name" required>
+            <br><br>
+            <label>Email</label><br>
+            <input type="email" required>
 
-                <br><br>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Comment or Message"></textarea><br><br>
-                <input type="submit">
-            </div>
+            <br><br>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Comment or Message" required></textarea><br><br>
+            <input type="submit">
+            <div id="invalide"></div>
         </form>
     </div>
 
 </body>
+
 </html>

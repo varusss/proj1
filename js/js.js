@@ -32,13 +32,20 @@ function down() {
 }
 
 function changeNav() {
-    var nav = document.getElementById("nav"),
-        fade = document.getElementsByClassName("fadeIn");
+    var nav = document.getElementById("nav");
     window.onscroll = function () {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 300) {
             nav.setAttribute("style", "background:#ffceaf;");
         } else {
             nav.setAttribute("style", "background:transparent;");
         }
     };
+};
+
+function validate() {
+    var name = document.getElementById("name").value,
+        respond = document.getElementById("invalide");
+    if (isNaN(name)) {
+        respond.innerHTML = "Name not valid";
+    }
 }
