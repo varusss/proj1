@@ -50,6 +50,11 @@ img {
     box-shadow: 0px 15px 10px -15px #111;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 0 auto;
+    opacity: 0;
+    animation: appear;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function:ease-in;
 }
 
 nav ul {
@@ -146,6 +151,49 @@ footer p {
     width: 100%;
     margin: 0 auto;
 }
+
+
+.dash{
+    width: 40px;
+    height: 4px;
+    background: #ffceaf;
+    margin: 0 auto;
+}
+
+.dashTop, .dashBottom{
+    width: 250px;
+    height: 2px;
+    background: #ffceaf;
+    margin: 0 auto;
+    animation-fill-mode: forwards;
+}
+
+.dashTop{
+    animation: moveTop 1s ease-in;
+}
+
+.dashBottom{
+    animation: moveDown 1s ease-in;
+}
+
+@keyframes moveTop{
+    0% {
+       transform: translateY(45px); 
+    }
+    100% {
+        margin: 0 auto;
+    }
+}
+
+@keyframes moveDown{
+    from {
+       transform: translateY(-45px); 
+    }
+    to{
+        margin: 0 auto;
+    }
+}
+
 
 /*----HOME------*/
 
@@ -302,10 +350,13 @@ footer p {
 
 /*---ABOUT ME-----*/
 
-.box1 h1,
+.text h1,
 .button {
     animation-name: appear;
     animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
 }
 
 .text {
@@ -335,23 +386,38 @@ footer p {
 
 /*---RESUME---*/
 
-.wrapper3 h1 {
-    padding: 4%;
-    height: 100vh;
-    top: 50%;
-    left: 50%;
-    transform: translateY(25%);
-    animation: appear 2s;
-}
-
-.wrapper3 h1 {
-    margin-top: 10%;
-}
-
 .wrapper3 h2 {
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 0;
+}
+
+.recheader{
+    margin: 7%;
+}
+
+.recheader {
+  position: relative;
+  text-align: center;
+}
+
+h2 span {
+  background: #fff;
+  padding: 0 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.recheader:before {
+  background: #adadad;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+    top: 50%;
+  width: 100%;
+}
+
+.recheader:before {
+  left: 0;
 }
 
 .flex-resume {
@@ -361,13 +427,6 @@ footer p {
     justify-content: space-around;
     align-content: flex-start;
     width: 100%;
-    margin: 0 auto;
-}
-
-.dash{
-    width: 40px;
-    height: 4px;
-    background: #ffceaf;
     margin: 0 auto;
 }
 
