@@ -31,13 +31,14 @@ function down() {
     });
 }
 
+
 function changeNav() {
     var nav = document.getElementById("nav");
     window.onscroll = function () {
-        if (window.scrollY > 300) {
-            nav.setAttribute("style", "background:#ffceaf;");
+        if (window.scrollY > 400) {
+            nav.setAttribute("style", "background:linear-gradient(-90deg, #ffffff, #ffceaf, #e3e3e3);");
         } else {
-            nav.setAttribute("style", "background:transparent;");
+            nav.setAttribute("style", "background: linear-gradient(-90deg, white, #8e8e8e, white);");
         }
     };
 };

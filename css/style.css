@@ -43,7 +43,6 @@ img {
 
 #nav {
     width: 100%;
-    background: transparent;
     top: 0%;
     position: fixed;
     font-family: 'Lora', serif;
@@ -52,9 +51,14 @@ img {
     margin: 0 auto;
     opacity: 0;
     animation: appear;
-    animation-delay: 2s;
+    animation-delay: 1.2s;
     animation-fill-mode: forwards;
     animation-timing-function:ease-in;
+    animation-duration: 1s;
+    //background: rgba(0,0,0,0.05);
+    z-index: 1;
+    background: linear-gradient(-90deg, #ffffff, #8e8e8e, #e3e3e3);
+
 }
 
 nav ul {
@@ -122,6 +126,8 @@ nav ul {
     margin: 0 auto;
 }
 
+
+/*---FOOTER----*/
 footer {
     width: 100%;
     background: #49afb2;
@@ -131,9 +137,11 @@ footer p {
     margin: 0 auto;
     text-align: center;
     color: aliceblue;
-    width: 20%;
+    width: 100%;
     padding: 2%;
+    border-right: 1px solid white;
 }
+
 
 .linkedImg {
     width: 40px;
@@ -149,7 +157,6 @@ footer p {
     justify-content: space-around;
     align-content: flex-start;
     width: 100%;
-    margin: 0 auto;
 }
 
 
@@ -169,11 +176,11 @@ footer p {
 }
 
 .dashTop{
-    animation: moveTop 1s ease-in;
+    animation: moveTop 0.5s ease-in;
 }
 
 .dashBottom{
-    animation: moveDown 1s ease-in;
+    animation: moveDown 0.5s ease-in;
 }
 
 @keyframes moveTop{
@@ -208,7 +215,7 @@ footer p {
 }
 
 .text1 h1 {
-    animation: first 2s ease-in;
+    animation: appear 1s ease-in;
 }
 
 .button {
@@ -247,19 +254,6 @@ footer p {
     60% {
         transform: translateY(-15px);
     }
-}
-
-@keyframes first {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-    ;
 }
 
 #top,
@@ -356,7 +350,7 @@ footer p {
     animation-duration: 2s;
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+    animation-delay: 0.5s;
 }
 
 .text {
