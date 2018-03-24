@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onscroll="changeNav()">
     <header>
         <nav id="nav">
             <div class="iconMenu">
@@ -36,13 +36,20 @@
         </nav>
     </header>
 
-    <div class="wrapper3">
+   <div class="text">
+          <div class="dashTop"></div>
         <h1>Resume</h1>
-
-        <div class="flex-resume">
+        <div class="dashBottom"></div>
+      </div>
+    <div class="wrapper3">
+      
+       
+        <div class="flex-resume fadeIn">
             <div class="box3-1">
                 <div class="border">
+
                     <h2>Education</h2>
+                    <div class="dash"></div>
                     <h4>Center of Advanced reaserch and Technology</h4>
                     <p>
                         Collaborate professionally with team.
@@ -56,6 +63,7 @@
                     </p>
 
                     <h2>Volunteer Work</h2>
+                    <div class="dash"></div>
                     <h4>Feeding the Families</h4>
                     <p> Help distribute food to families in fresno area. </p>
                     <h4>Pancake Breakfast</h4>
@@ -70,7 +78,7 @@
             <div class="box3-2">
                 <div class="border">
                     <h2>Extracurricular Activities</h2>
-
+                    <div class="dash"></div>
                     <p>Mock Trial
                         <br>Robotic
                         <br>Cyber Patriot</p>
@@ -78,7 +86,7 @@
 
 
                     <h2>Certificates and Awards</h2>
-
+                    <div class="dash"></div>
                     <p>Third Place State for Cyber Patriot
                         <br>Quarter Finalist in Robotic
                         <br>Principal Honor Roll
@@ -86,19 +94,21 @@
 
 
                     <h2>Computer Skills</h2>
-
+                    <div class="dash"></div>
                     <p>Microsoft Office
                         <br>Bracket
-                        <br>Photoshop</p>
-                    <br><br><br>
+                        <br>Photoshop
+                        <br>Eclipse</p>
+                    <br><br>
                 </div>
             </div>
 
         </div>
 
-        <h2>Recomendation Letters</h2>
-        <div class="">
+        <h2 class="recheader"><span>Recomendation Letters</span></h2>
+        <div class="fadeIn">
             <h2>First Letter</h2>
+            <div class="dash"></div>
             <div class="letter1">
                 <div class="border">
                     <p>To Who It May Concern:</p>
@@ -125,7 +135,8 @@
 
             </div>
             <h2>Second Letter</h2>
-            <div class="letter2">
+            <div class="dash"></div>
+            <div class="letter2 fadeIn">
                 <div class="border">
                     <p>Wednesday, October 4, 2017</p>
                     <p>To Whom It May Concern:
@@ -154,10 +165,24 @@
     </div>
 
     <footer>
-        <div class="linkedImg"></div>
-        <p>Oanh Tran</p>
-    </footer>
+        <div class="flex-resume">
 
+            
+            <div class="info">
+               <p>Oanh Tran</p>
+                <p>oanhtran901@gmail.com</p>
+                <p>559-797-2160</p>
+            </div>
+            <div class="linkedImg">
+                <a href="https://www.linkedin.com/in/oanh-tran-bb425015b/" target="_blank">
+               <img src="img/linked-in-2668700_640.png" alt="" width="40" height="40">
+           </a>
+
+            </div>
+        </div>
+
+    </footer>
+    <script type="text/javascript" src="js/js.js"></script>
 </body>
 
 </html>
