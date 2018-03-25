@@ -43,7 +43,6 @@ img {
 
 #nav {
     width: 100%;
-    top: 0%;
     position: fixed;
     font-family: 'Lora', serif;
     box-shadow: 0px 15px 10px -15px #111;
@@ -54,10 +53,9 @@ img {
     animation-delay: 1.2s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
-    animation-duration: 1s; //background: rgba(0,0,0,0.05);
+    animation-duration: 1s;
     z-index: 1;
-    background: linear-gradient(-90deg, #ffffff, #8e8e8e, #e3e3e3);
-
+    background: linear-gradient(-90deg, #ffffff, #86bcdd, #ffffff);
 }
 
 nav ul {
@@ -207,7 +205,10 @@ footer p {
 
 .text1 {
     height: 100vh;
-    background-attachment: fixed;
+    padding-top: 15%;
+    height: 85vh;
+    transform: translateY(15%);
+    font-size: 1.2em;
 }
 
 .page1 .img {
@@ -241,6 +242,65 @@ footer p {
     border-width: 0px 0 2px 2px;
 }
 
+.text1 {
+    padding: 3% 2%;
+}
+
+.flex-h {
+    padding-top: 4%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.middle p {
+    text-align: center;
+    margin-top: 0;
+    color: #49afb2;
+}
+
+.aboutMe {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 2%;
+    width: 120%;
+    margin: 10% 4%;
+}
+
+.aboutMe a img {
+    margin: 9%;
+}
+
+.aboutMe:hover{
+    animation: shrink 0.4s linear alternate;
+    animation-fill-mode: forwards;
+}
+
+.aboutMe:hover .recheader1:before{
+    animation: slide1 1s ease-in-out alternate;
+    animation-fill-mode: forwards;
+}
+
+.recheader1 {
+    margin: 4% 10%;
+    position: relative;
+    text-align: center;
+}
+
+.recheader1:before {
+    background: #adadad;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+}
+
 @keyframes bounce {
     0%,
     20%,
@@ -257,78 +317,24 @@ footer p {
     }
 }
 
-#top,
-#bottom,
-#left,
-#right {
-    background: linear-gradient(#000638, #000b6a);
-    position: fixed;
-    animation: border-change infinite;
+@keyframes slide1{
+    0% {
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-55px);
+        opacity: 0;
+    }
 }
 
-#left,
-#right {
-    top: 0;
-    bottom: 0;
-    width: 15px;
+@keyframes shrink {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
 }
-
-#left {
-    left: 0;
-}
-
-#right {
-    right: 0;
-}
-
-#top,
-#bottom {
-    left: 0;
-    right: 0;
-    height: 15px;
-}
-
-#top {
-    top: 0;
-}
-
-#bottom {
-    bottom: 0;
-}
-
-.text1 {
-    padding: 3% 2%;
-    height: 70vh;
-}
-
-.flex-h {
-    padding-top: 4%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    width: 100%;
-    margin: 0 auto;
-    height: 100vh;
-}
-
-.me {
-    color: #000000;
-    text-align: center;
-}
-
-.aboutMe {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 2%;
-    width: 120%;
-    margin: 2% 4%;
-}
-
-.aboutMe a img {
-    margin: 9%;
-}
-
 
 /*
 .middle{
@@ -353,9 +359,12 @@ footer p {
 }
 
 .text {
-    padding-top: 15%;
     height: 100vh;
-    transform: translateY(15%);
+    //transform: translateY(40%);
+    padding-top: 23%;
+    font-size: 1.2em;
+    top: 0;
+    background: linear-gradient(-180deg, #41677e, #86bcdd, #ffffff);
 }
 
 .contentBox {
@@ -383,20 +392,17 @@ footer p {
     text-align: center;
 }
 
-.recheader {
-    margin: 7%;
-}
-
-.recheader {
-    position: relative;
-    text-align: center;
-}
-
+p span,
 h2 span {
     background: #fff;
     padding: 0 15px;
     position: relative;
-    z-index: 1;
+}
+
+.recheader {
+    margin: 7%;
+    position: relative;
+    text-align: center;
 }
 
 .recheader:before {
@@ -407,9 +413,6 @@ h2 span {
     position: absolute;
     top: 50%;
     width: 100%;
-}
-
-.recheader:before {
     left: 0;
 }
 
@@ -432,13 +435,16 @@ h2 span {
     padding: 0;
 }
 
-.box3-1,
-.box3-2 {
-    width: 48%;
+.box3-1 {
+    width: 45%;
     text-align: center;
+}
+
+.box3-2 {
     background: #49afb2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2%;
+    margin-bottom: 5%;
 }
 
 .border {
@@ -453,7 +459,8 @@ h2 span {
     background: #49afb2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2%;
-    margin-bottom: 5%;
+    margin: 4% auto;
+    width: 90%;
 }
 
 /*---CONTACT---*/

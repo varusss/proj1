@@ -25,7 +25,7 @@ function slideShows(current) {
 
 function down() {
     window.scroll({
-        top: 1000,
+        top: 700,
         left: 0,
         behavior: 'smooth'
     });
@@ -36,9 +36,9 @@ function changeNav() {
     var nav = document.getElementById("nav");
     window.onscroll = function () {
         if (window.scrollY > 400) {
-            nav.setAttribute("style", "background:linear-gradient(-90deg, #ffffff, #ffceaf, #e3e3e3);");
+            nav.setAttribute("style", "background:linear-gradient(-90deg, #ffffff, #ffceaf, #ffffff);");
         } else {
-            nav.setAttribute("style", "background: linear-gradient(-90deg, white, #8e8e8e, white);");
+            nav.setAttribute("style", "background: linear-gradient(-90deg, #ffffff, #86bcdd, #ffffff);");
         }
     };
 };
