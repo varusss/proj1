@@ -3,6 +3,19 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #1e4a5d;
+  outline: 1px solid slategrey;
+}
+
 .svg1{
     position: absolute;
     transform: scale(1.7);
@@ -19,16 +32,6 @@
 
 .page1{
     overflow-x: hidden;
-}
-
--webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
-}
-
--webkit-scrollbar-thumb {
-    background-color: #000000;
-    border: 2px solid #555555;
 }
 
 body {
@@ -260,6 +263,7 @@ footer {
     align-content: flex-start;
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 2%;
 }
 
 .middle p {
@@ -425,8 +429,15 @@ h2 span {
 
 /*---CONTACT---*/
 
-.form {
-    max-width: 360px;
+.contact{
+    padding-top: 12%;
+}
+
+.contact h1{
+    align-self: center;
+    text-align: right;
+    width: 45%;
+    padding-right: 3%;
 }
 
 input {
@@ -440,13 +451,13 @@ input:focus {
     transition: transform 0.3s;
 }
 
-input[type="submit"] {
+button[type="button"] {
     border: 1px solid #49afb2;
-    width: 20%;
-    padding: 1%;
+    width: 40%;
+    padding: 3%;
     background: #49afb2;
     border-radius: 20px;
-    margin-left: 23%;
+    margin: 0 30%;
 }
 
 label {
@@ -457,11 +468,13 @@ label {
 
 .wrapper-C h3 {
     text-align: center;
+    width: 50%;
 }
 
 form {
     width: 100%;
-    padding-left: 40%;
+    padding-left: 3%;
+    margin-left: -70%;
 }
 
 /*-----ART-----*/
@@ -469,7 +482,11 @@ form {
 .imgA {
     max-width: 500px;
     position: relative;
-    margin: auto;
+    margin-left: 10%;
+}
+
+.text3{
+    width: 40%;
 }
 
 .header {
@@ -498,16 +515,17 @@ form {
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
+    margin-top: 20%;
 }
 
 .next {
     //top: 40%;
-    right: 15%;
+    left: 31%;
 }
 
 .prev {
     //top: 40%;
-    left: 20%;
+    left: 25%;
 }
 
 /*--WRITTING--*/
@@ -567,6 +585,8 @@ form {
 
 
 /*---------KEYFRAMES--------*/
+
+
 @keyframes bounce {
     0%,
     20%,
@@ -633,6 +653,8 @@ form {
 
 
 /*-----MEDIA QUERY---------*/
+
+
 @media screen and (min-width: 481px) and (max-width: 1024px) {
     body {
         background: black;

@@ -35,24 +35,28 @@
             </ul>
         </nav>
     </header>
-    <br><br>
-    <h1>Contact</h1>
 
-    <div class="wrapper-C">
-        <h3>You can contact me through this:</h3>
-        <form name="contact" onsubmit="validate">
-            <label>Name</label><br>
-            <input type="text" id="name" required>
-            <br><br>
-            <label>Email</label><br>
-            <input type="email" required>
+    <div class="flex-resume contact">
+        <h1>Contact:</h1>
 
-            <br><br>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Comment or Message" required></textarea><br><br>
-            <input type="submit">
-            <div id="invalide"></div>
-        </form>
+
+        <div class="wrapper-C">
+            <form name="contact" id="form">
+                <label>Name</label><br>
+                <input type="text" id="name" required>
+                <br><br>
+                <label>Email</label><br>
+                <input type="email" id="email" required>
+
+                <br><br>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Comment or Message" required id="msm"></textarea><br><br>
+                <button type="button" onclick="validate();">Submit</button>
+                <div id="invalide"></div>
+                
+            </form>
+        </div>
     </div>
+    <script src="js/js.js"></script>
 
 </body>
 

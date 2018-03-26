@@ -23,6 +23,7 @@ function slideShows(current) {
     slides[current].style.display = "block";
 }
 
+/*Scroll to the end, smooth scroll */
 function down() {
     window.scroll({
         top: 700,
@@ -44,9 +45,35 @@ function changeNav() {
 };
 
 function validate() {
-    var name = document.getElementById("name"),
-        respond = document.getElementById("invalide");
-    if (isNaN(name) === true) {
-        respond.innerHTML = "Name not valid";
+    var name = document.getElementById("name").value,
+        email = document.getElementById("email").value,
+        //msm = document.getElementById("msm").value,
+        respond = document.getElementById("invalide"),
+        /*Regular Expression*/
+        reg = new RegExp("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", "g"),
+        CheckEmail = email.match(reg);
+    
+    /*Check if @ is there */
+    reg = reg.test(CheckEmail);
+    //console.log(typeof msm);
+    
+    /*Form validation*/
+    if (isNaN(name) === false && reg === false) {
+        respond.innerHTML = "<p>*Name not valid and email not valid</p>";
+    }
+    if(isNaN(name)===false){
+        respond.innerHTML = "<p> *Name is not valid </p>"
+    }
+    if(reg === false){
+        respond.innerHTML ="<p> *Invalid Email</p>"
+    }
+    if(isNaN(name) === true && reg === true){
+        document.getElementById("form").submit();
+    }
+//    if(msm === null){
+//        respond.innerHTML ="<p>Blank Message</p>"
+//    }
+    else{
+        console.log("Reset");
     }
 }
