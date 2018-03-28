@@ -9,13 +9,14 @@
 
 <body>
     <header>
+            <header>
         <nav id="nav">
-            <div class="iconMenu">
+            <div id="iconMenu" onclick="iconMenu()">
                 <div class="icon"></div>
                 <div class="icon"></div>
                 <div class="icon"></div>
             </div>
-            <ul class="content">
+            <ul id="content">
                 <div class="flex">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutme.html">About Me</a></li>
@@ -35,26 +36,27 @@
             </ul>
         </nav>
     </header>
+    </header>
 
     <div class="flex-resume contact">
-        <h1>Contact:</h1>
-
-
-        <div class="wrapper-C">
-            <form name="contact" id="form">
-                <label>Name</label><br>
-                <input type="text" id="name" required>
-                <br><br>
-                <label>Email</label><br>
-                <input type="email" id="email" required>
-
-                <br><br>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Comment or Message" required id="msm"></textarea><br><br>
-                <button type="button" onclick="validate();">Submit</button>
-                <div id="invalide"></div>
-                
-            </form>
+        <div class="text-about">
+            <div class="dashTop"></div>
+            <h1>Contact:</h1>
+            <div class="dashBottom"></div>
         </div>
+        <form name="contact" id="form">
+            <label>Name</label><br>
+            <input type="text" id="name" required>
+            <br><br>
+            <label>Email</label><br>
+            <input type="email" id="email" required>
+
+            <br><br>
+            <textarea name="" id="" cols="26" rows="7" placeholder="Comment or Message" required id="msm"></textarea><br><br>
+            <button type="submit" onclick="validate();">Submit</button>
+            <div id="invalide"></div>
+
+        </form>
     </div>
     <script src="js/js.js"></script>
 

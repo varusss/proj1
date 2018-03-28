@@ -50,30 +50,40 @@ function validate() {
         //msm = document.getElementById("msm").value,
         respond = document.getElementById("invalide"),
         /*Regular Expression*/
-        reg = new RegExp("/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/", "g"),
+        reg = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", "g"),
         CheckEmail = email.match(reg);
-    
+
     /*Check if @ is there */
     reg = reg.test(CheckEmail);
     //console.log(typeof msm);
-    
+
     /*Form validation*/
     if (isNaN(name) === false && reg === false) {
-        respond.innerHTML = "<p>*Name not valid and email not valid</p>";
+        respond.innerHTML = "<p>*Name not valid <br> *Email not valid</p>";
     }
-    if(isNaN(name)===false){
+    if (isNaN(name) === false) {
         respond.innerHTML = "<p> *Name is not valid </p>"
     }
-    if(reg === false){
-        respond.innerHTML ="<p> *Invalid Email</p>"
+    if (reg === false) {
+        respond.innerHTML = "<p> *Invalid Email</p>"
     }
-    if(isNaN(name) === true && reg === true){
+    if (isNaN(name) === true && reg === true) {
         document.getElementById("form").submit();
     }
-//    if(msm === null){
-//        respond.innerHTML ="<p>Blank Message</p>"
-//    }
-    else{
+    //    if(msm === null){
+    //        respond.innerHTML ="<p>Blank Message</p>"
+    //    }
+    else {
         console.log("Reset");
     }
+}
+
+function iconMenu() {
+    var click = document.getElementById("nav").classList.toggle("change");
+    if (click === true) {
+        document.getElementById("content").style.display = "block";
+    } else {
+        document.getElementById("content").style.display = "none";
+    }
+
 }
