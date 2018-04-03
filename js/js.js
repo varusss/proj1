@@ -49,13 +49,13 @@ function changeNav() {
     var w = window.innerWidth;
     var h = window.innerHeight;
     window.onscroll = function () {
-        if (w > 700) {
-            if (window.scrollY > h) {
+        if (w > 1024) {
+            if (window.scrollY > h - 50) {
                 nav.setAttribute("style", "background:linear-gradient(-90deg, #ffffff, #ffceaf, #ffffff); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
             } else {
                 nav.setAttribute("style", "background: transparent");
             }
-        } 
+        }
 
     };
 };
@@ -65,32 +65,33 @@ function validate() {
         email = document.getElementById("email").value,
         respond = document.getElementById("invalide"),
         /*Regular Expression*/
-        reg = new RegExp("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$", "g"),
+        reg = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/", "g"),
         CheckEmail = email.match(reg);
 
     /*Check email format */
     reg = reg.test(CheckEmail);
-
+    console.log(isNaN(name));
+    console.log(reg);
     /*Form validation*/
     if (isNaN(name) === false) {
         respond.innerHTML = "<p>*Name not valid</p>";
     }
-    if (isNaN(name) === false) {
-        respond.innerHTML = "<p> *Name is not valid </p>"
+    if (reg === true) {
+        respond.innerHTML = "<p> *Invalid Email</p>";
     }
-    if (reg === false) {
-        respond.innerHTML = "<p> *Invalid Email</p>"
-    } else {
-        console.log("Reset");
+    if (isNaN(name) === true && reg === false) {
+        document.getElementById("form").submit();
+        console.log("mayber?????");
     }
 }
 
 function iconMenu() {
-    var click = document.getElementById("nav").classList.toggle("change");
+    var click = document.getElementById("nav").classList.toggle("change"),
+        content = document.getElementById("content");
     if (click === true) {
-        document.getElementById("content").style.display = "block";
+        content.style.display = "block";
     } else {
-        document.getElementById("content").style.display = "none";
+        content.style.display = "none";
     }
 
 }

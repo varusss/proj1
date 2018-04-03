@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb {
 .svg2 {
     position: absolute;
     transform: scale(1.7);
-    top: -16%;
+    top: -10%;
     right: 3%
 }
 
@@ -83,7 +83,7 @@ img {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
     animation-duration: 0.5s;
-    z-index: 1;
+    z-index: 5;
     background: transparent;
 }
 
@@ -147,7 +147,8 @@ nav ul {
 .wrapper2,
 .wrapper3,
 .wrapper-W,
-.wrapper-C {
+.wrapper-C,
+.art {
     max-width: 970px;
     margin: 0 auto;
 }
@@ -156,7 +157,7 @@ nav ul {
 
 footer {
     width: 100%;
-    background: #0e2627;
+    background: rgba(65, 103, 126, 1);
 }
 
 .info {
@@ -176,13 +177,6 @@ footer {
     width: 100%;
     padding-right: 27%;
     border-left: 1px solid white;
-}
-
-.linkedImg {
-    width: 40px;
-    height: 40px;
-    align-self: center;
-    margin-right: 2%;
 }
 
 .flex-footer {
@@ -292,12 +286,18 @@ footer {
     color: #49afb2;
 }
 
+.recheader1 span {
+    background: rgba(65, 103, 126, 1);
+    margin: 0;
+    padding: 0;
+}
+
 .aboutMe {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2%;
     width: 120%;
     margin: 10% 4%;
-    background: linear-gradient(135deg, rgba(255, 206, 175, 1) 60%, rgba(65, 103, 126, 1) 40%); 
+    background: linear-gradient(135deg, rgba(255, 206, 175, 1) 60%, rgba(65, 103, 126, 1) 40%);
 }
 
 .aboutMe a img {
@@ -374,10 +374,10 @@ footer {
 
 p span,
 h2 span {
-    //background: rgba(65, 103, 126, 1);
     padding: 0 15px;
     position: relative;
     z-index: 1;
+    background: white;
 }
 
 .recheader {
@@ -502,15 +502,17 @@ form {
 .imgA {
     max-width: 500px;
     position: relative;
-    margin-left: 10%;
+    align-self: center;
 }
 
 .art {
     padding: 10% 0;
+    height: 100vh;
 }
 
 .text3 {
     width: 40%;
+    align-self: center;
 }
 
 .header {
@@ -525,7 +527,7 @@ form {
 .pic {
     display: none;
     margin-bottom: 2%;
-    animation: appear 0.4;
+    transition-delay: 0.5s;
 }
 
 .prev,
@@ -552,7 +554,7 @@ form {
 
 /*--WRITTING--*/
 
-.writting:nth-child(3) {
+.writting:nth-child(2) {
     margin-bottom: 6%;
 }
 
@@ -680,6 +682,22 @@ form {
     }
 }
 
+@keyframes appear2 {
+    0% {
+        opacity: 0;
+        background: #49afb2;
+        transform: translateX(-50%);
+    }
+    80%{
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    ;
+}
+
 
 
 /*-----MEDIA QUERY---------*/
@@ -690,6 +708,14 @@ form {
         background: #dbdbdb;
     }
 */
+    /*Footer----------------*/
+    .info {
+        padding-left: 20%;
+    }
+
+    .info1 {
+        padding-right: 10%;
+    }
     .icon {
         width: 38px;
         height: 5px;
@@ -707,7 +733,6 @@ form {
         width: 100%;
         padding-left: 25%;
         padding-right: 25%;
-        transition: 1s ease-in;
     }
     #iconMenu {
         width: 6%;
@@ -734,6 +759,31 @@ form {
         text-align: center;
         margin: 2% auto;
         padding: 2% 0;
+        opacity: 0;
+    }
+
+    #content li:nth-child(1) {
+        animation: appear2 0.3s linear;
+        animation-fill-mode: forwards;
+    }
+
+    #content li:nth-child(2) {
+        animation: appear2 0.3s linear 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    #content li:nth-child(3) {
+        animation: appear2 0.3s linear 0.6s;
+        animation-fill-mode: forwards;
+    }
+    #content li:nth-child(4) {
+        animation: appear2 0.3s linear 0.9s;
+        animation-fill-mode: forwards;
+
+    }
+    #content li:nth-child(5) {
+        animation: appear2 0.5s linear 1.2s;
+        animation-fill-mode: forwards;
     }
 
     #content li:nth-child(4):hover {
@@ -833,6 +883,17 @@ form {
     .flex-resume img {
         width: 300px;
     }
+
+    .contact .text-about {
+        background: white;
+    }
+
+    /*---CONTACT---*/
+    form {
+        margin-top: 12%;
+        height: 450px;
+    }
+
 }
 
 
@@ -862,7 +923,7 @@ form {
         width: 6%;
         height: auto;
         position: relative;
-        margin: 0 ;
+        margin: 0;
     }
     #nav {
         width: 100%;
@@ -918,6 +979,16 @@ form {
     .change .icon:nth-child(1) {
         transform: rotate(-45deg) translate(-8px, 8px);
     }
+
+    /*Footer-----------------------------------------*/
+    .info {
+        padding-left: 20%;
+    }
+
+    .info1 {
+        padding-right: 10%;
+    }
+
     /*----Home Page ----*/
     .svg1 {
         transform: scale(1.3) translateX(-43%);
@@ -971,7 +1042,7 @@ form {
     }
 
     /*RESUME*/
-    body{
+    body {
         overflow-x: hidden;
     }
     .wrapper3 .flex-resume {
@@ -1062,6 +1133,16 @@ form {
 }
 
 @media screen and (max-width: 480px) {
+
+    /*    footer*/
+    .info {
+        padding-left: 0%;
+    }
+
+    .info1 {
+        padding-right: 0%;
+    }
+
     .icon {
         width: 38px;
         height: 5px;
@@ -1145,23 +1226,11 @@ form {
         background: #adadad;
     }
 */
-    .icon {
-        width: 35px;
-        height: 5px;
-        background-color: white;
-        margin: 6px 0;
-    }
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
     footer {
         overflow: hidden;
     }
-    
-    .text{
+
+    .text {
         padding-top: 40%;
     }
 
@@ -1301,17 +1370,18 @@ form {
 
     .text3 {
         width: 70%;
-        margin: 0 auto;
+        margin: 5% auto;
     }
 
     .pic img {
-        margin: 0;
-        width: 400px;
+        margin-top: 5%;
+        margin-left: 5%;
+        width: 230px;
     }
 
     .prev,
     .next {
-        margin-left: 0%;
+        //margin-left: 0%;
     }
 
 }
