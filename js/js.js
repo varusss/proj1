@@ -51,7 +51,7 @@ function changeNav() {
     window.onscroll = function () {
         if (w > 1024) {
             if (window.scrollY > h - 20) {
-                nav.setAttribute("style", "background:linear-gradient(-90deg, #ffffff, #ffceaf, #ffffff); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
+                nav.setAttribute("style", "background:linear-gradient(-90deg, #818181,#ffceaf, #ffceaf,#ffceaf, #818181); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
             } else {
                 nav.setAttribute("style", "background: transparent");
             }
@@ -93,10 +93,17 @@ function validate() {
 
 function iconMenu() {
     var click = document.getElementById("nav").classList.toggle("change"),
-        content = document.getElementById("content");
+        content = document.getElementById("content"),
+        li1 = document.getElementById("content").getElementsByTagName("LI")[0];
+    console.log(click);
     if (click === true) {
         content.style.display = "block";
-    } else {
+    }
+    if (click === false) {
+//        li1.innerHeight = "me";
+//        setTimeout(function () {
+//            content.style.display = "none";
+//        }, 1300)
         content.style.display = "none";
     }
 
