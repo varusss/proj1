@@ -1,5 +1,7 @@
 var slides = document.getElementsByClassName("pic"),
-    current = 1;
+    current = 0,
+    w = window.innerWidth,
+    h = window.innerHeight;
 
 function nextSlide() {
     slideShows(current += 1);
@@ -46,18 +48,23 @@ function down() {
 
 function changeNav() {
     var nav = document.getElementById("nav");
-    var w = window.innerWidth;
-    var h = window.innerHeight;
     window.onscroll = function () {
         if (w > 1024) {
-            if (window.scrollY > h - 50) {
+            if (window.scrollY > h - 20) {
                 nav.setAttribute("style", "background:linear-gradient(-90deg, #ffffff, #ffceaf, #ffffff); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
             } else {
                 nav.setAttribute("style", "background: transparent");
             }
+        } else {
+            if (window.scrollY > h - 100) {
+                nav.setAttribute("style", "background: linear-gradient(45deg, rgb(41, 67, 83) 70%,  rgb(163, 124, 98) 33%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
+            } else {
+                nav.setAttribute("style", "background: #437695;");
+            }
         }
 
-    };
+    }
+
 };
 
 function validate() {
@@ -81,7 +88,6 @@ function validate() {
     }
     if (isNaN(name) === true && reg === false) {
         document.getElementById("form").submit();
-        console.log("mayber?????");
     }
 }
 

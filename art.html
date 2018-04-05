@@ -8,63 +8,60 @@
 
 <body>
     <header>
-        <header>
-            <nav id="nav">
-                <div id="iconMenu" onclick="iconMenu()">
-                    <div class="icon"></div>
-                    <div class="icon"></div>
-                    <div class="icon"></div>
+        <nav id="nav">
+            <div id="iconMenu" onclick="iconMenu()">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+            <ul id="content" class="flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="portfolio"><a href="#">Porfolio</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="program.html">Programming</a></li>
+                            <li><a href="Writting.html">Writting</a></li>
+                            <li><a href="art.html">Art</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="wrapper-c">
+        <div class="flex-resume contact">
+            <div class="text-about">
+                <div class="dashTop"></div>
+                <h1>Art</h1>
+                <div class="dashBottom"></div>
+            </div>
+
+            <div class="art">
+                <div class="imgA">
+                    <div class="pic"><img src="img/art2.jpg" alt="" width="450"></div>
+                    <div class="pic"><img src="img/art3.jpg" alt="" width="450"></div>
+                    <div class="pic"><img src="img/art4.jpg" alt="" width="450"></div>
+                    <a class="prev" onclick="prevSlide()">&#10094;</a>
+                    <a class="next" onclick="nextSlide()">&#10095;</a>
                 </div>
-                <ul id="content">
-                    <div class="flex">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutme.html">About Me</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li class="portfolio"><a href="#">Porfolio</a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="program.html">Programming</a></li>
-                                    <li><a href="Writting.html">Writting</a></li>
-                                    <li><a href="art.html">Art</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="contact.html">Contact</a> </li>
+                <div class="text3">
+                    <div class="box3-2">
+                        <div class="border">
+                            <p>
+                                This is my artwork. I’m taking ceramics class that my high school provided. I learn how to make pottery and sculpture in three different ways, by hand, by wheel, or by mold.
+                            </p>
+                        </div>
                     </div>
 
-                </ul>
-            </nav>
-        </header>
-    </header>
-
-    <div class="wrapper-a">
-        <div class="text">
-            <div class="dashTop"></div>
-            <h1>Art</h1>
-            <div class="dashBottom"></div>
-        </div>
-
-        <div class="flex-resume art">
-            <div class="imgA">
-                <div class="pic"><img src="img/art2.jpg" alt="" width="400"></div>
-                <div class="pic"><img src="img/art3.jpg" alt="" width="400"></div>
-                <div class="pic"><img src="img/art4.jpg" alt="" width="400"></div>
-                <a class="prev" onclick="prevSlide()">&#10094;</a>
-                <a class="next" onclick="nextSlide()">&#10095;</a>
+                </div>
             </div>
-            <div class="text3">
-               <div class="box3-2">
-                   <div class="border">
-                       <p>
-                    This is my artwork. I’m taking ceramics class that my high school provided. I learn how to make pottery and sculpture in three different ways, by hand, by wheel, or by mold.
-                </p>
-                   </div>
-               </div>
-                
-            </div>
-        </div>
 
+        </div>
     </div>
-    <script type="text/javascript" src="js/js.js"></script>
+
+    <script src="js/js.js"></script>
 </body>
 </html>

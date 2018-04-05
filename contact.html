@@ -8,40 +8,53 @@
 </head>
 
 <body>
-    <header>
+     <header>
         <nav id="nav">
             <div id="iconMenu" onclick="iconMenu()">
                 <div class="icon"></div>
                 <div class="icon"></div>
                 <div class="icon"></div>
             </div>
-            <ul id="content">
-                <div class="flex">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About Me</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li class="portfolio"><a href="#">Porfolio</a>
-                        <div class="dropdown">
-                            <ul>
-                                <li><a href="program.html">Programming</a></li>
-                                <li><a href="Writting.html">Writting</a></li>
-                                <li><a href="art.html">Art</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><a href="contact.html">Contact</a> </li>
-                </div>
-
+            <ul id="content" class="flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="portfolio"><a href="#">Porfolio</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="program.html">Programming</a></li>
+                            <li><a href="Writting.html">Writting</a></li>
+                            <li><a href="art.html">Art</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a> </li>
             </ul>
         </nav>
     </header>
 
+    <div class="text">
+        <div class="dashTop"></div>
+        <h1>Contact</h1>
+        <div class="dashBottom"></div>
+    </div>
+
     <div class="wrapper-c">
         <div class="flex-resume contact">
-            <div class="text-about">
-                <div class="dashTop"></div>
-                <h1>Contact</h1>
-                <div class="dashBottom"></div>
+            <div class="thanksLetter">
+                <div class="boxc">
+                    <div class="border">
+                        <p>
+                            Thank you for taking the time to visit my portfolio website. I hope that this website haf give you insight about me. I’m looking for an internship or a part time job in the computer science field.
+                        </p>
+                        <p>
+                            You can contact me through my contact information listed below:
+                            <br><br> oanhtran901@gmail.com
+                            <br><br> (559)-797-2160
+                        </p>
+                    </div>
+                </div>
+
             </div>
             <form name="contact" id="form" action="mailto:">
                 <label>Name</label><br>
@@ -51,13 +64,14 @@
                 <input type="email" id="email" required>
 
                 <br><br>
-                <textarea name="" id="" cols="26" rows="7" placeholder="Comment or Message" required id="msm"></textarea><br><br>
+                <textarea id="msm" cols="26" rows="7" placeholder="Comment or Message" required></textarea><br><br>
                 <button type="submit" onclick="validate();">Submit</button>
                 <div id="invalide"></div>
 
             </form>
         </div>
     </div>
+    
 
     <script src="js/js.js"></script>
 

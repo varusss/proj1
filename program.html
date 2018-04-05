@@ -8,34 +8,29 @@
 </head>
 
 <body onscroll="changeNav();">
-    <header>
-        <header>
-            <nav id="nav">
-                <div id="iconMenu" onclick="iconMenu()">
-                    <div class="icon"></div>
-                    <div class="icon"></div>
-                    <div class="icon"></div>
-                </div>
-                <ul id="content">
-                    <div class="flex">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutme.html">About Me</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li class="portfolio"><a href="#">Porfolio</a>
-                            <div class="dropdown">
-                                <ul>
-                                    <li><a href="program.html">Programming</a></li>
-                                    <li><a href="Writting.html">Writting</a></li>
-                                    <li><a href="art.html">Art</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="contact.html">Contact</a> </li>
+     <header>
+        <nav id="nav">
+            <div id="iconMenu" onclick="iconMenu()">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+            <ul id="content" class="flex">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li class="portfolio"><a href="#">Porfolio</a>
+                    <div class="dropdown">
+                        <ul>
+                            <li><a href="program.html">Programming</a></li>
+                            <li><a href="Writting.html">Writting</a></li>
+                            <li><a href="art.html">Art</a></li>
+                        </ul>
                     </div>
-
-                </ul>
-            </nav>
-        </header>
+                </li>
+                <li><a href="contact.html">Contact</a> </li>
+            </ul>
+        </nav>
     </header>
     <div class="text">
         <div class="dashTop"></div>
@@ -52,7 +47,7 @@
         <div class="turtle flex-resume">
 
             <div class="Img">
-                <img src="img/webProject1.PNG" alt="" width="400px">
+                <img src="img/webProject1.PNG" alt="" width="400">
             </div>
             <div class="programexp">
                 <div class="border">
@@ -67,10 +62,11 @@
 
         <h2>Zen Garden</h2>
         <div class="dash"></div>
+        <br>
         <div class="zenGar flex-resume">
 
             <div class="Img">
-                <img src="img/zenImh1.PNG" alt="" width="400px">
+                <img src="img/zenImh1.PNG" alt="" width="400">
             </div>
 
             <div class="programexp">
@@ -103,8 +99,26 @@
         <br></div>
 
 
+    <footer>
+        <!--
+        <div class="linkedImg">
+            <a href="https://www.linkedin.com/in/oanh-tran-bb425015b/" target="_blank">
+               <img src="img/linked-in-2668700_640.png" alt="" width="40" height="40">
+           </a>
+        </div>
+-->
+        <div class="flex-resume">
+            <div class="info">
+                <p>Oanh Tran</p>
+            </div>
+            <div class="info1">
+                <p>oanhtran901@gmail.com</p>
+                <p>559-797-2160</p>
+            </div>
+        </div>
 
-    <script type="text/javascript" src="js/js.js"></script>
+    </footer>
+    <script src="js/js.js"></script>
 </body>
 
 </html>
