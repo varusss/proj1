@@ -7,44 +7,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <header>
-        <nav id="nav">
-            <div id="iconMenu" onclick="iconMenu()">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-            <ul id="content" class="flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="portfolio"><a href="#">Porfolio</a>
-                    <div class="dropdown">
-                        <ul>
-                            <li><a href="program.html">Programming</a></li>
-                            <li><a href="Writting.html">Writting</a></li>
-                            <li><a href="art.html">Art</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a> </li>
-            </ul>
-        </nav>
-    </header>
+<body onscroll="changeNav();">
+    <?php require 'module/navbar.php' ?>
 
-    <div class="box1 ">
-        <div class="flex-resume">
-            <div class="text-about">
-                <br>
-                <div class="dashTop"></div>
-                <h1>About Me</h1>
-                <div class="dashBottom"></div>
-                <br>
-            </div>
+    <div class="text">
+        <div class="dashTop"></div>
+        <h1>About Me</h1>
+        <div class="dashBottom"></div>
+    </div>
 
             <div class="contentBox">
-                <div class="box3-2">
+              <img src="img/portrait.jpg" alt="" width="400">
+                <div class="box3-2" style="width:80%;">
                     <div class="border">
                         <p>Hi, my name is Oanh Tran. I’m a high school student at Clovis East and CART, Center for Advanced Research and Technology. I live in Clovis, California. I have a background in HTML, CSS, Javascript and C++. For me programming is solving a puzzle and communicating the result in a foreign language. I being able to constantly learn new things and apply it to my project.
                             <br><br>I’m taking honor and AP courses at school. I currently have a 3.9 GPA. I also take part in Robotic and Mock Trial. I programmed the 2017 robot for Robotic and I play the role of an attorney for Mock Trial. I had built a few small websites in Web Application class. One of the website was about Hawkbill Sea Turtle, and the other was about information security.
@@ -58,6 +32,8 @@
         </div>
 
     </div>
+
+    <?php require 'module/footer.php' ?>
 
     <script src="js/js.js"></script>
 </body>

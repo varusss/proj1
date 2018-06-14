@@ -8,32 +8,8 @@
 </head>
 
 <body onscroll="changeNav();">
- <header>
-        <nav id="nav">
-            <div id="iconMenu" onclick="iconMenu()">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-            <ul id="content" class="flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="portfolio"><a href="#">Porfolio</a>
-                    <div class="dropdown">
-                        <ul>
-                            <li><a href="program.html">Programming</a></li>
-                            <li><a href="Writting.html">Writting</a></li>
-                            <li><a href="art.html">Art</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a> </li>
-            </ul>
-        </nav>
-    </header>
+ <?php require 'module/navbar.php' ?>
 
-    <div class="parallax">
         <div class="parallaxLayer1 parallax-layer">
             <div class="text">
                 <div class="dashTop"></div>
@@ -41,9 +17,6 @@
                 <div class="dashBottom"></div>
             </div>
         </div>
-        <div class="parallaxLayer2 parallax-layer">
-            <div class="wrapper3">
-
 
                 <div class="flex-resume fadeIn">
                     <div class="box3-1">
@@ -123,39 +96,41 @@
                 </div>
 
                 <h2 class="recheader"><span>Recomendation Letters</span></h2>
-                <div class="fadeIn ">
+
+                <div class="flex-resume">
+                  <div class="letter-content">
+                    <h2 id="letter1">First Letter</h2>
+                    <div class="dash" id="dash1"></div>
+                    <h2 id="letter2" onclick="displayLetter();">Second Letter</h2>
+                    <div class="dash" id="dash2"></div>
+                  </div>
+                  <div class="letter-container">
                     <div class="letter1">
-                        <div class="border">
-                            <h2>First Letter</h2>
-                            <div class="dash"></div>
-                            <p>To Who It May Concern:</p>
-                            <p>
-                                I met Oanh Tran for the first time in 2015 when she was a student in my English 10 class at Clovis East High School. As a student, she immediately impressed me. Oanh is a hard-working students who takes her education very seriously. During the year she spent in my class, she never once failed to turn in an assignment. Her work was always done thoroughly, and her thoughts and insights were unusually astute for a young woman her age. In one particular writing assignment, she shared with me her journey of assimilation when first arriving in the United States at a young age. She was able to convey her story so beautifully; I still reference her example when teaching writing to my current students.
-                            </p>
-                            <p>
-                                In addition to getting to know Oanh as her teacher, I’ve also had the opportunity to work with her as a coach. As the Mock trial advisor at Clovis East, I successfully recruited Oanh during her sophomore year. She earned a spot as a defense attorney, and was so impressive in that role that she earned Defensive Team Member of the year for the 2017 season. She returned as a defense attorney in the 2018 season, and again proves to be a valuable asset to the team. I never had to worry about whether or not Oanh would be prepared or up to the task; I knew that she would not disappoint me.
+                          <div class="border">
+                              <p>To Who It May Concern:</p>
+                              <p>
+                                  I met Oanh Tran for the first time in 2015 when she was a student in my English 10 class at Clovis East High School. As a student, she immediately impressed me. Oanh is a hard-working students who takes her education very seriously. During the year she spent in my class, she never once failed to turn in an assignment. Her work was always done thoroughly, and her thoughts and insights were unusually astute for a young woman her age. In one particular writing assignment, she shared with me her journey of assimilation when first arriving in the United States at a young age. She was able to convey her story so beautifully; I still reference her example when teaching writing to my current students.
+                              </p>
+                              <p>
+                                  In addition to getting to know Oanh as her teacher, I’ve also had the opportunity to work with her as a coach. As the Mock trial advisor at Clovis East, I successfully recruited Oanh during her sophomore year. She earned a spot as a defense attorney, and was so impressive in that role that she earned Defensive Team Member of the year for the 2017 season. She returned as a defense attorney in the 2018 season, and again proves to be a valuable asset to the team. I never had to worry about whether or not Oanh would be prepared or up to the task; I knew that she would not disappoint me.
+                              </p>
+                              <p>
+                                  Oanh is a young lady who will accomplish amazing things. She is brilliant, driven, and committed to giving every project her all. I look forward to learning about all the successes she is doubtlessly going to have.
+                              </p>
+                              <p>
+                                  Please contact me if you have any questions or would like any more information.
+                                  <br>
+                                  <br>Thank you,
+                                  <br>Janis Ziese
+                                  <br>janiesziese@cusd.com
+                                  <br>English Teacher
+                                  <br>Clovis East High School
+                              </p>
+                          </div>
 
-                            </p>
-                            <p>
-                                Oanh is a young lady who will accomplish amazing things. She is brilliant, driven, and committed to giving every project her all. I look forward to learning about all the successes she is doubtlessly going to have.
-                            </p>
-                            <p>
-                                Please contact me if you have any questions or would like any more information.
-                                <br>
-                                <br>Thank you,
-                                <br>Janis Ziese
-                                <br>janiesziese@cusd.com
-                                <br>English Teacher
-                                <br>Clovis East High School
-                            </p>
-                        </div>
-
-                    </div>
-
+                          </div>
                     <div class="letter2 fadeIn">
                         <div class="border">
-                            <h2>Second Letter</h2>
-                            <div class="dash"></div>
                             <p>Wednesday, October 4, 2017</p>
                             <p>To Whom It May Concern:
                                 <br>
@@ -177,10 +152,10 @@
                             </p>
                         </div>
                     </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
+
+
 
 
 

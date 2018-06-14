@@ -8,30 +8,7 @@
 </head>
 
 <body onscroll="changeNav();">
-     <header>
-        <nav id="nav">
-            <div id="iconMenu" onclick="iconMenu()">
-                <div class="icon"></div>
-                <div class="icon"></div>
-                <div class="icon"></div>
-            </div>
-            <ul id="content" class="flex">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutme.html">About Me</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li class="portfolio"><a href="#">Porfolio</a>
-                    <div class="dropdown">
-                        <ul>
-                            <li><a href="program.html">Programming</a></li>
-                            <li><a href="Writting.html">Writting</a></li>
-                            <li><a href="art.html">Art</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact</a> </li>
-            </ul>
-        </nav>
-    </header>
+     <?php require 'module/navbar.php' ?>
     <div class="text">
         <div class="dashTop"></div>
         <h1>Programming Projects</h1>

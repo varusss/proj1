@@ -1,44 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Lora:400,400i|Playfair+Display:400,700');
 @import url('https://fonts.googleapis.com/css?family=Philosopher');
 @import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps');
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+
 * {
     box-sizing: border-box;
 }
 
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, body::-o-scrollbar {
     width: 0.5em;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track, body::-o-scrollbar-track {
     -webkit-box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.9);
 }
 
-body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb, body::-o-scrollbar-thumb {
     background-color: #1e4a5d;
     outline: 1px solid slategrey;
 }
 
 .shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.svg1 {
-    position: absolute;
-    transform: scale(1.7) translateX(-35%);
-    bottom: 13%;
-    /*
-    background: radial-gradient(circle, rgba(103,198,255,1) 12%, rgba(184,150,128,1) 37%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-*/
-}
-
-.svg2 {
-    position: absolute;
-    transform: scale(1.7);
-    top: -10%;
-    right: 3%
 }
 
 .page1 {
@@ -83,14 +67,24 @@ img {
     position: fixed;
     font-family: 'Lora', serif;
     margin: 0 auto;
-    opacity: 0;
-    animation: appear;
-    animation-delay: 0.5s;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
-    animation-duration: 0.5s;
     z-index: 5;
-    background: transparent;
+    transition: all 1s ease-in;
+    height: 60px;
+}
+
+.flex-center {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.changeNavColor{
+    animation: changeNavColor 0.3s ease-in;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -104,7 +98,14 @@ nav ul {
     justify-content: space-around;
     align-content: flex-start;
     width: 60%;
-    margin: 0 auto;
+}
+
+#nav p{
+  font-size: 3em;
+  width: 20%;
+  float: left;
+  margin: 0 5%;
+  font-family: 'Sacramento', cursive;
 }
 
 #content li {
@@ -124,16 +125,20 @@ nav ul {
     color: #000000;
 }
 
+#content li a:hover{
+    color: #bf8c6e;
+}
+
 .dropdown {
     display: none;
     position: absolute;
-    margin-top: 5.5%;
-    background: #ffceaf;
-    width: 200px;
+    top: 48px;
+    background: #afbbff;
+    width: 150px;
 }
 
 .dropdown ul {
-    padding: 10px;
+    padding: 3px;
     text-align: center;
 }
 
@@ -147,16 +152,6 @@ nav ul {
 
 .portfolio:hover .dropdown {
     display: block;
-}
-
-.wrapper1,
-.wrapper2,
-.wrapper3,
-.wrapper-W,
-.wrapper-c,
-.art {
-    max-width: 970px;
-    margin: 0 auto;
 }
 
 /*---FOOTER----*/
@@ -226,43 +221,64 @@ footer p {
 }
 
 .text {
-    height: 100vh;
+    height: 80vh;
     width: 100%;
-    padding-top: 20%;
+    padding-top: 15%;
     font-size: 1.2em;
-    background: linear-gradient(45deg, rgba(255, 206, 175, 1) 33%, rgba(65, 103, 126, 1) 81%);
-    /*
-    position: absolute;
-    top: 0;
-    //z-index: -99;
-*/
+    background: linear-gradient(to right, #ffa17f, #00223e);
 }
 
 /*----HOME------*/
 
-.text1 {
+.headerImg {
     height: 100vh;
-    padding-top: 15%;
-    height: 85vh;
-    transform: translateY(15%);
-    font-size: 1.2em;
+    font-size: 1em;
+    background: url(../img/pexels-photo-340981.jpeg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 30%;
 }
 
-.text1 h1 {
-    animation: appear 1s ease-in;
+.headerImg h1 {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    color: white;
+}
+
+.headerImg h1:nth-child(1){
+  font-size: 1.5em;
+}
+
+.headerImg h1:nth-child(2){
+  font-size: 2.5em;
+}
+
+.textBox{
+    width: 50%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    padding: 1%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -70%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     left: 50%;
     margin-left: -16px;
     display: block;
     width: 50px;
     height: 50px;
     background-size: 14px auto;
-    animation: bounce 2s infinite;
-    transition: 0.5s ease-in-out;
+    animation: bounceUp 0.2s infinite alternate ease-in-out;
+}
+
+.button:hover{
+  cursor: pointer;
 }
 
 .button:before {
@@ -271,24 +287,23 @@ footer p {
     width: 30px;
     height: 30px;
     content: "";
-    border: 2px solid #030303;
-    border-width: 0px 0 2px 2px;
+    border: 7px solid #bfa750;
+    border-width: 0px 0 7px 7px;
 }
 
-.text1 {
+.headerImg {
     padding: 3% 2%;
 }
 
 .flex-h {
-    padding-top: 4%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: flex-start;
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
-    margin-bottom: 2%;
+    padding-bottom: 4%;
 }
 
 .middle p {
@@ -306,16 +321,19 @@ footer p {
 .aboutMe {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2%;
-    width: 120%;
-    margin: 10% 4%;
-    background: linear-gradient(45deg, rgb(41, 67, 83) 60%, rgb(163, 124, 98) 33%);
+    width: 200px;
+    height: 200px;
+    margin: 30% auto;
+    background: linear-gradient(rgb(163, 124, 98) 75%, rgb(41, 67, 83) 25%);
 }
 
 .aboutMe a img {
-    margin: 9%;
+    margin: 10% 0 20% 48px;
+    display: flex;
+    justify-content: center;
 }
 
-.aboutMe:hover {
+.aboutMe a img:hover {
     animation: shrink 0.2s linear alternate;
     animation-fill-mode: forwards;
 }
@@ -342,10 +360,6 @@ footer p {
     left: 0;
 }
 
-.home {
-    margin-top: 5%;
-}
-
 
 /*---ABOUT ME-----*/
 
@@ -363,13 +377,20 @@ footer p {
 }
 
 .text-about {
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 .contentBox {
-    width: 50%;
-    margin: 6% 0;
-    padding-top: 7%;
+    width: 90%;
+    margin: 6% auto;
+    display: flex;
+    flex-direction: row;
+    flex: wrap;
+    align-items: flex-start;
+}
+
+.contentBox img{
+  margin-top: 5%;
 }
 
 
@@ -447,14 +468,51 @@ h2 span {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+.letter-container{
+  width: 70%;
+}
+
 .letter1,
 .letter2 {
     text-align: justify;
     background: #49afb2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 2%;
-    margin: 10% auto;
-    width: 90%;
+    margin-bottom: 4%;
+}
+
+.letter2{
+    display: none;
+}
+
+#dash2{
+    display: none;
+}
+
+.letter-content .dash{
+    margin: 0;
+}
+
+.letter-content h2{
+    padding:3% 0;
+    margin: 3% 0;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+#letter2{
+    margin-top: 20%;
+}
+
+.letter-content h2:hover{
+    transform-origin: top left;
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
 }
 
 /*---CONTACT---*/
@@ -465,26 +523,30 @@ h2 span {
 
 .boxc {
     background: #49afb2;
-    padding: 3%;
-    width: 70%;
-    margin: 20% 10%;
+    padding: 2%;
+    width: 60%;
+    margin: 2% auto;
 }
 
 input,
 textarea {
-    border: 2px solid #23305c;
-    width: 230px;
+    border: 0px;
+    border-bottom: 3px solid gray;
+    width: 300px;
     font-size: 1.1em;
-    background: #e2e2e2;
     overflow: hidden;
     margin: 0 auto;
+}
+
+form label{
+  color: black;
 }
 
 input:focus,
 textarea:focus {
     outline: none;
     border: none;
-    border-bottom: 2px solid #23305c;
+    border-bottom: 3px solid #ffceaf;
     transition: 0.2s ease-in;
     background: white;
 }
@@ -496,13 +558,14 @@ textarea:focus {
 button[type="submit"] {
     border: 1px solid transparent;
     padding: 5%;
-    background: #49afb2;
-    margin: 0 20%;
-    width: 50%;
+    margin: 0 30%;
+    width: 40%;
+    background: rgb(222, 222, 222);
 }
 
 button[type="submit"]:hover {
     cursor: pointer;
+    background: #49afb2;
 }
 
 label {
@@ -510,11 +573,9 @@ label {
 }
 
 form {
-    margin: 12% 0;
-    background: rgb(222, 222, 222);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1% auto 8%;
     padding: 2%;
-    transform: translateX(-20%);
+    width: 350px;
 }
 
 .wrapper-c {
@@ -646,19 +707,14 @@ form {
 
 /*---------KEYFRAMES--------*/
 
-@keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
+@keyframes bounceUp {
+    0% {
+      transform: translateY(0);
+      opacity: 0.5;
+    }
     100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
+      transform: translateY(0.4em);
+      opacity: 1;
     }
 }
 
@@ -677,7 +733,7 @@ form {
         transform: scale(1);
     }
     100% {
-        transform: scale(0.85);
+        transform: scale(1.3);
     }
 }
 
@@ -734,14 +790,46 @@ form {
     }
 }
 
+@keyframes textBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    80% {
+        opacity: 0.5
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes changeNavColor {
+    0%{
+      background: -webkit-linear-gradient(0deg, #ffffff, rgba(175, 187, 255, 0.2),rgba(175, 187, 255,0.2), #ffffff);
+    }
+    25%{
+      background: -webkit-linear-gradient(0deg, #ffffff, rgba(175, 187, 255, 0.4),rgba(175, 187, 255,0.4), #ffffff);
+    }
+    50%{
+      background: -webkit-linear-gradient(0deg, #ffffff, rgba(175, 187, 255, 0.6),rgba(175, 187, 255,0.6), #ffffff);
+    }
+    75%{
+      background: -webkit-linear-gradient(0deg, #ffffff, rgba(175, 187, 255, 0.8),rgba(175, 187, 255,0.8), #ffffff);
+    }
+    100%{
+      background: -webkit-linear-gradient(0deg, #ffffff, rgba(175, 187, 255, 1),rgba(175, 187, 255,1), #ffffff);
+    }
+}
+
 /*-----MEDIA QUERY---------*/
 
 @media screen and (min-width: 701px) and (max-width: 1024px) {
-    /*
-    body {
+
+    /* body {
         background: #dbdbdb;
-    }
-*/
+    } */
+
     /*Footer----------------*/
     .info {
         padding-left: 20%;
@@ -857,21 +945,6 @@ form {
 
 
     /*------Home Page ------------------------------------*/
-    .svg1 {
-        transform: scale(1.3) translateX(-43%);
-        bottom: 5%;
-    }
-
-    .svg2 {
-        transform: scale(1.3);
-        top: -16%;
-        right: -3%
-    }
-
-    .text1 {
-        padding: 7% 15%;
-        font-size: 1em;
-    }
 
     .flex-h {
         flex-wrap: wrap;
@@ -882,13 +955,6 @@ form {
 
     .aboutMe {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 2%;
-        width: 100%;
-        margin: 10% 4%;
-    }
-
-    .aboutMe a img {
-        margin: 2% 0%;
     }
 
     /*---------about me------------*/
@@ -1072,27 +1138,19 @@ form {
         right: -3%
     }
 
-    .text1 {
+    .headerImg {
         padding: 7% 15%;
         font-size: 1em;
     }
 
     .flex-h {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 80%;
-        margin-bottom: 4%;
+        display: block;
+        margin: 0 auto;
     }
 
     .aboutMe {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        padding: 2%;
-        width: 100%;
-        margin: 10% 4%;
-    }
-
-    .aboutMe a img {
-        margin: 2% 0%;
+        margin: 2% auto;
     }
 
     /*About Me*/
@@ -1199,8 +1257,6 @@ form {
     .text3 {
         margin-top: 15%;
     }
-
-
 }
 
 @media screen and (max-width: 480px) {
@@ -1319,11 +1375,7 @@ form {
     .change .icon:nth-child(1) {
         transform: rotate(-45deg) translate(-8px, 8px);
     }
-    /*
-    body {
-        background: #adadad;
-    }
-*/
+
     footer {
         overflow: hidden;
     }
@@ -1341,21 +1393,20 @@ form {
         display: none;
     }
 
-    .text1 {
+    .headerImg {
         padding: 20% 15%;
         font-size: 1em;
         margin-top: -20%;
     }
 
     .flex-h {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 50%;
-        margin-left: 20%;
+        display: block;
+        margin: 0 auto;
     }
 
     .aboutMe {
-        width: 120%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 5% auto;
     }
 
     .button {

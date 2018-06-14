@@ -49,11 +49,12 @@ function down() {
 function changeNav() {
     var nav = document.getElementById("nav");
     window.onscroll = function () {
+        var navHeight = nav.clientHeight;
         if (w > 1024) {
-            if (window.scrollY > h - 20) {
-                nav.setAttribute("style", "background:linear-gradient(-90deg, #818181,#ffceaf, #ffceaf,#ffceaf, #818181); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
+            if (window.scrollY > navHeight) {
+                nav.classList.add("changeNavColor");
             } else {
-                nav.setAttribute("style", "background: transparent");
+                nav.classList.remove("changeNavColor");
             }
         } else {
             if (window.scrollY > h - 100) {
@@ -107,4 +108,27 @@ function iconMenu() {
         content.style.display = "none";
     }
 
+}
+
+function displayLetter(){
+    var displayLetter2 = document.getElementById('letter2'),
+        displayLetter1 = document.getElementById('letter1'),
+        letter2 = document.getElementsByClassName('letter2')[0],
+        letter1 = document.getElementsByClassName('letter1')[0],
+        dash1 = document.getElementById('dash1'),
+        dash2 = document.getElementById('dash2');
+
+    displayLetter1.onclick = function () {
+        letter1.style.display = "block";
+        letter2.style.display = "none";
+        dash1.style.display = "block";
+        dash2.style.display = "none";
+    }
+
+    displayLetter2.onclick = function () {
+        letter1.style.display = "none";
+        letter2.style.display = "block";
+        dash1.style.display = "none";
+        dash2.style.display = "block";
+    }
 }
