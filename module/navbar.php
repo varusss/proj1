@@ -14,7 +14,7 @@
                    <div class="dropdown">
                        <ul>
                            <li><a href="program.php">Programming</a></li>
-                           <li><a href="Writting.php">Writting</a></li>
+                           <li><a href="writting.php">Writting</a></li>
                            <li><a href="art.php">Art</a></li>
                        </ul>
                    </div>

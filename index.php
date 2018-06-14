@@ -29,7 +29,7 @@
             </div>
             <div class="aboutMe">
                 <a href="program.php">
-                           <img src="img/programmingIcon.png" alt="">
+                           <img src="img/ProgrammingIcon.png" alt="">
                         <div class="middle">
                             <p class="recheader1"><span>Programming</span></p>
                         </div>
@@ -48,7 +48,7 @@
                        </a>
             </div>
             <div class="aboutMe">
-                <a href="writting.php"><img src="img/writtingIcon.png" alt="">
+                <a href="writting.php"><img src="img/WrittingIcon.png" alt="">
                         <div class="middle">
                             <p class="recheader1"><span>Writting</span></p>
                         </div>
