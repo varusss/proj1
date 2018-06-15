@@ -116,19 +116,22 @@ function displayLetter(){
         letter2 = document.getElementsByClassName('letter2')[0],
         letter1 = document.getElementsByClassName('letter1')[0],
         dash1 = document.getElementById('dash1'),
-        dash2 = document.getElementById('dash2');
+        dash2 = document.getElementById('dash2'),
+        card = document.getElementsByClassName('card')[0];
 
-    displayLetter1.onclick = function () {
-        letter1.style.display = "block";
-        letter2.style.display = "none";
-        dash1.style.display = "block";
-        dash2.style.display = "none";
-    }
+        displayLetter1.onclick = function () {
+            letter1.style.display = "block";
+            letter2.style.display = "none";
+            dash1.style.display = "block";
+            dash2.style.display = "none";
+            card.classList.toggle('is-flipped');
+        }
 
-    displayLetter2.onclick = function () {
-        letter1.style.display = "none";
-        letter2.style.display = "block";
-        dash1.style.display = "none";
-        dash2.style.display = "block";
-    }
+        displayLetter2.onclick = function () {
+            letter1.style.display = "none";
+            letter2.style.display = "block";
+            dash1.style.display = "none";
+            dash2.style.display = "block";
+            card.classList.toggle('is-flipped');
+        }
 }
