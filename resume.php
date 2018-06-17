@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onscroll="changeNav();">
+<body onscroll="changeNav(); fadeOutColor();">
  <?php require 'module/navbar.php' ?>
 
-        <div class="parallaxLayer1 parallax-layer">
+            <div class="backgroundColor"></div>
+
             <div class="text">
                 <div class="dashTop"></div>
                 <h1>Resume</h1>
                 <div class="dashBottom"></div>
             </div>
-        </div>
 
                 <div class="flex-resume fadeIn">
                     <div class="box3-1">
@@ -99,10 +99,8 @@
 
                 <div class="flex-resume">
                   <div class="letter-content">
-                    <p id="letter1">First Letter</p>
-                    <div class="dash" id="dash1"></div>
-                    <p id="letter2" onclick="displayLetter();">Second Letter</p>
-                    <div class="dash" id="dash2"></div>
+                    <p id="letter1" onclick="displayLetter();">First Letter <span class="dash" id="dash1"></span></p>
+                    <p id="letter2" onclick="displayLetter();">Second Letter <span class="dash" id="dash2"></span></p>
                   </div>
                   <div class="letter-container">
                     <div class="card">

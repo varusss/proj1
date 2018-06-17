@@ -48,24 +48,12 @@ function down() {
 
 function changeNav() {
     var nav = document.getElementById("nav");
-    window.onscroll = function () {
         var navHeight = nav.clientHeight;
-        if (w > 1024) {
             if (window.scrollY > navHeight) {
                 nav.classList.add("changeNavColor");
             } else {
                 nav.classList.remove("changeNavColor");
             }
-        } else {
-            if (window.scrollY > h - 100) {
-                nav.setAttribute("style", "background: linear-gradient(45deg, rgb(41, 67, 83) 70%,  rgb(163, 124, 98) 33%); box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);");
-            } else {
-                nav.setAttribute("style", "background: #437695;");
-            }
-        }
-
-    }
-
 };
 
 function validate() {
@@ -134,4 +122,16 @@ function displayLetter(){
             dash2.style.display = "block";
             card.classList.toggle('is-flipped');
         }
+}
+
+function fadeOutColor(){
+    var Color = document.getElementsByClassName('backgroundColor')[0];
+    var y = window.scrollY;
+
+    if(y > 150){
+      Color.classList.add('changeColor');
+    }
+    else{
+      Color.classList.remove('changeColor');
+    }
 }

@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onscroll="changeNav();">
+<body onscroll="changeNav(); fadeOutColor();">
     <?php require 'module/navbar.php' ?>
+    <div class="backgroundColor"></div>
 
     <div class="text">
         <div class="dashTop"></div>
@@ -17,8 +18,10 @@
     </div>
 
             <div class="contentBox">
-              <img src="img/portrait.jpg" alt="" width="400">
-                <div class="box3-2" style="width:80%;">
+              <div class="imgBox">
+                  <img src="img/portrait.jpg" alt="" width="300">
+              </div>
+                <div class="box3-2">
                     <div class="border">
                         <p>Hi, my name is Oanh Tran. I’m a high school student at Clovis East and CART, Center for Advanced Research and Technology. I live in Clovis, California. I have a background in HTML, CSS, Javascript and C++. For me programming is solving a puzzle and communicating the result in a foreign language. I being able to constantly learn new things and apply it to my project.
                             <br><br>I’m taking honor and AP courses at school. I currently have a 3.9 GPA. I also take part in Robotic and Mock Trial. I programmed the 2017 robot for Robotic and I play the role of an attorney for Mock Trial. I had built a few small websites in Web Application class. One of the website was about Hawkbill Sea Turtle, and the other was about information security.

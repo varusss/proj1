@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onscroll="changeNav()">
+<body onscroll="changeNav(); fadeOutColor();">
     <?php require 'module/navbar.php' ?>
+    <div class="backgroundColor"></div>
 
     <div class="text">
         <div class="dashTop"></div>
