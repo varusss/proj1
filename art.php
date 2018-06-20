@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Art</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php require 'module/head.php' ?>
 
 <body onscroll="changeNav(); fadeOutColor();">
     <?php require 'module/navbar.php' ?>

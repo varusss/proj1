@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php require 'module/head.php' ?>
 
 <body class="page1">
     <div class="headerImg">

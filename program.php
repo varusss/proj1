@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Programming</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php require 'module/head.php' ?>
 
 <body onscroll="changeNav(); fadeOutColor();">
     <?php require 'module/navbar.php' ?>
@@ -24,7 +20,7 @@
 
         <h2>Hawkbill Sea Turtle</h2>
         <div class="dash"></div>
-        <div class="turtle flex-resume">
+        <div class="turtle flex-resume fadeIn">
 
             <div class="Img">
                 <img src="img/webProject1.PNG" alt="" width="400">
@@ -43,7 +39,7 @@
         <h2>Zen Garden</h2>
         <div class="dash"></div>
         <br>
-        <div class="zenGar flex-resume">
+        <div class="zenGar flex-resume fadeIn">
 
             <div class="Img">
                 <img src="img/zenImh1.PNG" alt="" width="400">
@@ -61,7 +57,7 @@
 
         <h2>C++</h2>
         <div class="dash"></div>
-        <div class="robotic flex-resume">
+        <div class="robotic flex-resume fadeIn">
             <div class="Img">
                 <img src="img/pic2.PNG" alt="">
             </div>
@@ -99,6 +95,9 @@
 
     </footer>
     <script src="js/js.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/scrollingJS.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Resume</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php require 'module/head.php' ?>
 
 <body onscroll="changeNav(); fadeOutColor();">
  <?php require 'module/navbar.php' ?>
@@ -18,10 +14,9 @@
                 <div class="dashBottom"></div>
             </div>
 
-                <div class="flex-resume fadeIn">
+                <div class="flex-resume">
                     <div class="box3-1">
-
-                        <div class="box3-2">
+                        <div class="box3-2 fadeIn">
                             <div class="border">
                                 <h2>Education</h2>
                                 <div class="dash"></div>
@@ -40,7 +35,7 @@
                             </div>
                         </div>
 
-                        <div class="box3-2">
+                        <div class="box3-2 fadeIn">
                             <div class="border">
                                 <h2>Volunteer Work</h2>
                                 <div class="dash"></div>
@@ -56,7 +51,7 @@
                     </div>
 
                     <div class="box3-1">
-                        <div class="box3-2">
+                        <div class="box3-2 fadeIn">
                             <div class="border">
                                 <h2>Extracurricular Activities</h2>
                                 <div class="dash"></div>
@@ -67,7 +62,7 @@
                             </div>
                         </div>
 
-                        <div class="box3-2">
+                        <div class="box3-2 fadeIn">
                             <div class="border">
                                 <h2>Certificates and Awards</h2>
                                 <div class="dash"></div>
@@ -79,7 +74,7 @@
                             </div>
                         </div>
 
-                        <div class="box3-2">
+                        <div class="box3-2 fadeIn">
                             <div class="border">
                                 <h2>Computer Skills</h2>
                                 <div class="dash"></div>
@@ -128,7 +123,7 @@
                             </div>
 
                             </div>
-                      <div class="letter2 fadeIn">
+                      <div class="letter2">
                           <div class="border">
                               <p>Wednesday, October 4, 2017</p>
                               <p>To Whom It May Concern:
@@ -155,32 +150,10 @@
                   </div>
                 </div>
 
-
-
-
-
-
-
-    <footer>
-        <!--
-        <div class="linkedImg">
-            <a href="https://www.linkedin.com/in/oanh-tran-bb425015b/" target="_blank">
-               <img src="img/linked-in-2668700_640.png" alt="" width="40" height="40">
-           </a>
-        </div>
--->
-        <div class="flex-resume">
-            <div class="info">
-                <p>Oanh Tran</p>
-            </div>
-            <div class="info1">
-                <p>oanhtran901@gmail.com</p>
-                <p>559-797-2160</p>
-            </div>
-        </div>
-
-    </footer>
+    <?php require 'module/footer.php' ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/js.js"></script>
+    <script src="js/scrollingJS.js"></script>
 </body>
 
 </html>

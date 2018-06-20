@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Writing</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<?php require 'module/head.php' ?>
 
 <body onscroll="changeNav(); fadeOutColor();">
     <?php require 'module/navbar.php' ?>
@@ -20,7 +16,7 @@
 
     <div class="wrapper-W">
 
-        <div class="writting flex-resume">
+        <div class="writting flex-resume fadeIn">
             <div class="exp">
                 <div class="">
                     <p>Abraham Lincoln was the 16th President of the United States. He was not very well-known in the political circle until the election of 1860. Many considered his election was pure luck since he was unknown to many people until the election of 1860; however, he was considered to be a great president in U.S history. Lincoln possessed many skills that help to be good at politics when had little to no skill in administration. He was good at understanding people’s motives and arguments. He was willing to admit that he is wrong when he makes a mistake. Finally, when other infuriated him, he would not hold grudge against them, and he would not take his anger out on them. All these traits that he has are more than enough to convince any sensible person in 1860 to vote for him.
@@ -45,7 +41,7 @@
 
 
 
-        <div class="writting flex-resume">
+        <div class="writting flex-resume fadeIn">
             <div class="exp">
                 <div class="">
                     <p>Violence is never a way to escape tyranny and inequality. Rebellion and war always lead to more conflict and bloodshed. In 1913, women in the U.S fought for the right to vote through nonviolent means. And more recently, the Egyptian people overthrow the government peacefully using social media. It is very clear that nonviolent is effective to change the government.</p>
@@ -63,7 +59,7 @@
 
         </div>
 
-        <div class="writting flex-resume">
+        <div class="writting flex-resume fadeIn">
             <div class="exp">
                 <div class="">
                     <p> She wasn’t a very close friend of mine. In fact, I barely knew anyone at school. I was a new student, new to the country and new to the language. It was a very interesting and scary experience. Your mouth, he refuses to speak and, the ears, they refuse to hear.</p>
@@ -84,7 +80,9 @@
     </div>
 
     <?php require 'module/footer.php' ?>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/js.js"></script>
+    <script src="js/scrollingJS.js"></script>
 </body>
 
 </html>

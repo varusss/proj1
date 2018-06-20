@@ -49,7 +49,7 @@ function down() {
 function changeNav() {
     var nav = document.getElementById("nav");
         var navHeight = nav.clientHeight;
-            if (window.scrollY > navHeight) {
+            if (window.scrollY > navHeight + 50) {
                 nav.classList.add("changeNavColor");
             } else {
                 nav.classList.remove("changeNavColor");
@@ -128,7 +128,7 @@ function fadeOutColor(){
     var Color = document.getElementsByClassName('backgroundColor')[0];
     var y = window.scrollY;
 
-    if(y > 150){
+    if(y > 250){
       Color.classList.add('changeColor');
     }
     else{

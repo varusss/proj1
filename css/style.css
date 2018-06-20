@@ -222,13 +222,18 @@ footer p {
     height: 100%;
     width: 100%;
     z-index: -3;
-    background-color: #9fc6ea;
-    transition: all 0.3s ease-in;
+    background-color: #d87611;
+    transition: all 0.8s ease-in;
 }
 
 .changeColor{
     background-color: white;
 }
+
+.fadeIn{
+    opacity: 0;
+}
+
 
 /*----HOME------*/
 
@@ -315,7 +320,7 @@ footer p {
 }
 
 .recheader1 span {
-    background: rgb(41, 67, 83);
+    background: #f0810f;
     margin: 0;
     padding: 0;
 }
@@ -326,7 +331,7 @@ footer p {
     width: 200px;
     height: 200px;
     margin: 30% auto;
-    background: linear-gradient(rgb(163, 124, 98) 75%, rgb(41, 67, 83) 25%);
+    background: linear-gradient(#063852 75%, #f0810f 25%);
 }
 
 .aboutMe a img {
@@ -445,7 +450,7 @@ h2 span {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: flex-start;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -480,7 +485,7 @@ h2 span {
 
 .letter-container{
     width: 70%;
-    height: 780px;
+    height: 900px;
     perspective: 600px;
 }
 
@@ -964,6 +969,10 @@ form {
 
   .change .icon:nth-child(1) {
       transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .fadeIn{
+      opacity: 1;
   }
 
   /*---------about me------------*/
