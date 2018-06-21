@@ -15,7 +15,7 @@
     <br><br><br>
     <div class="home flex-h">
         <div>
-            <div class="aboutMe">
+            <div class="aboutMe fadeIn">
                 <a href="aboutme.php">
                            <img src="img/aboutmeIcon.png" alt="" >
                         <div class="middle">
@@ -23,7 +23,7 @@
                         </div>
                        </a>
             </div>
-            <div class="aboutMe">
+            <div class="aboutMe fadeIn">
                 <a href="program.php">
                            <img src="img/ProgrammingIcon.png" alt="">
                         <div class="middle">
@@ -35,7 +35,7 @@
         </div>
 
         <div>
-            <div class="aboutMe">
+            <div class="aboutMe fadeIn">
                 <a href="resume.php">
                            <img src="img/resumeIcon.png" alt="">
                         <div class="middle">
@@ -43,7 +43,7 @@
                         </div>
                        </a>
             </div>
-            <div class="aboutMe">
+            <div class="aboutMe fadeIn">
                 <a href="writting.php"><img src="img/WrittingIcon.png" alt="">
                         <div class="middle">
                             <p class="recheader1"><span>Writting</span></p>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="div">
-            <div class="aboutMe">
+            <div class="aboutMe fadeIn">
                 <a href="contact.php">
                        <img src="img/mailIcon.png" alt="">
                         <div class="middle">
@@ -61,7 +61,7 @@
                         </a>
 
             </div>
-            <div class="aboutMe">
+            <div class="aboutMe fadeIn">
                 <a href="art.php">
                         <img src="img/artIcon.png" alt="">
                         <div class="middle">
@@ -73,7 +73,6 @@
 
 
     </div>
-
-    <script src="js/js.js"></script>
+<?php require 'module/footer.php' ?>
 </body>
 </html>

@@ -74,30 +74,7 @@
         </div>
         <br></div>
 
-
-    <footer>
-        <!--
-        <div class="linkedImg">
-            <a href="https://www.linkedin.com/in/oanh-tran-bb425015b/" target="_blank">
-               <img src="img/linked-in-2668700_640.png" alt="" width="40" height="40">
-           </a>
-        </div>
--->
-        <div class="flex-resume">
-            <div class="info">
-                <p>Oanh Tran</p>
-            </div>
-            <div class="info1">
-                <p>oanhtran901@gmail.com</p>
-                <p>559-797-2160</p>
-            </div>
-        </div>
-
-    </footer>
-    <script src="js/js.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/js.js"></script>
-    <script src="js/scrollingJS.js"></script>
+<?php require 'module/footer.php' ?>
 </body>
 
 </html>

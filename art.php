@@ -34,6 +34,5 @@
         </div>
 
     <?php require 'module/footer.php' ?>
-    <script src="js/js.js"></script>
 </body>
 </html>

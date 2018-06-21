@@ -595,7 +595,7 @@ input:focus,
 textarea:focus {
     outline: none;
     border: none;
-    border-bottom: 2px solid #ffceaf;
+    border-bottom: 2px solid #f0810f;
     transition: 0.2s ease-in;
     background: white;
 }
